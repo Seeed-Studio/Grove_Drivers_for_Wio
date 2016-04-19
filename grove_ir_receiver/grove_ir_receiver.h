@@ -147,16 +147,16 @@ public:
     uint8_t *data_hex;
     bool    new_data_available;
     
-    void Clear();
-    int decode(decode_results *results);
-    uint8_t IsDta();
-    uint8_t Recv();
-    void check_data();
+    void Clear() ICACHE_RAM_ATTR;
+    int decode(decode_results *results) ICACHE_RAM_ATTR;
+    uint8_t IsDta() ICACHE_RAM_ATTR;
+    uint8_t Recv() ICACHE_RAM_ATTR;
+    void check_data() ICACHE_RAM_ATTR;
     
-    void _format_data();
+    void _format_data() ICACHE_RAM_ATTR;
     
 };
 
-static void grove_ir_recv_timer_interrupt_handler(void *para);
+static void grove_ir_recv_timer_interrupt_handler(void *para) ICACHE_RAM_ATTR;
 
 #endif

@@ -104,11 +104,11 @@ private:
     uint8_t ms_cnt;
     
 public:
-    void update();
+    void update() ICACHE_RAM_ATTR;
 
 };
 
 
-static void timer_handler_encoder_update(void *para);
+static void timer_handler_encoder_update(void *para) ICACHE_RAM_ATTR;
 
 #endif

@@ -48,8 +48,8 @@ bool GroveTempHumPro::_read(IO_T *io)
 
     // pull the pin high and wait 250 milliseconds
     //digitalWrite(_pin, SULI_HIGH);
-    suli_pin_write(io, SULI_HIGH);
-    suli_delay_ms(250);
+    //suli_pin_write(io, SULI_HIGH);
+    //suli_delay_ms(250);
 
     currenttime = suli_millis();
     if (currenttime < _lastreadtime)

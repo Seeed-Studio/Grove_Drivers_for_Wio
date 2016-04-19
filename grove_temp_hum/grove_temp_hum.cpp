@@ -48,8 +48,8 @@ bool GroveTempHum::_read(IO_T *io)
 
     // pull the pin high and wait 250 milliseconds
     //digitalWrite(_pin, SULI_HIGH);
-    suli_pin_write(io, SULI_HIGH);
-    suli_delay_ms(250);
+    //suli_pin_write(io, SULI_HIGH);
+    //suli_delay_ms(250);
 
     currenttime = suli_millis();
     if (currenttime < _lastreadtime)
@@ -110,9 +110,8 @@ bool GroveTempHum::_read(IO_T *io)
                 data[j / 8] |= 1;
             j++;
         }
-
     }
-
+        
     // check we read 40 bits and that the checksum matches
     if ((j >= 40) &&
         (data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF)))
