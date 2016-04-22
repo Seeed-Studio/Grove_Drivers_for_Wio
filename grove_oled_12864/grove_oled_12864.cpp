@@ -188,7 +188,11 @@ void GroveOLED12864::oled_128x64_char(uint8_t C)
 
     if(C < 32 || C > 127) //Ignore non-printable ASCII characters. This can be modified for multilingual font.
     {
-        if (C=='\r' || C=='\n')
+        if (C=='\r')
+        {
+            oled_128x64_XY(last_row, 0);
+            return;
+        } else if (C=='\n')
         {
             oled_128x64_XY(last_row + 1, 0);
             return;

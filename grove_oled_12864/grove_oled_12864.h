@@ -1,4 +1,4 @@
-﻿/*
+/*
  * grove_oled_12864.h
  *
  * Copyright (c) 2012 seeed technology inc.
