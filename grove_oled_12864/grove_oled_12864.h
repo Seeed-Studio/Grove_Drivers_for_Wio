@@ -32,7 +32,7 @@
 
 #include "suli2.h"
 
-//GROVE_NAME        "Grove - OLED Display 1.12''"
+//GROVE_NAME        "Grove - OLED Display 0.96''"
 //SKU               104030008
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/ea/Toled128642.jpg/400px-Toled128642.jpg
@@ -78,112 +78,112 @@ public:
 
     /**
      * Clear the whole screen
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_clear();
-    
+
     /**
      * Set the brightness for the screen
-     * 
+     *
      * @param brightness - 0~255
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_brightness(uint8_t brightness);
-    
+
     /**
      * Print a integer
-     * 
+     *
      * @param row - 0~7
      * @param col - 0~15
      * @param i - the integer to display
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_integer(uint8_t row, uint8_t col, int32_t i);
-    
+
     /**
      * Print a float number
-     * 
+     *
      * @param row - 0~7
      * @param col - 0~15
      * @param f - float number
      * @param decimal - the decimal bits
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_float(uint8_t row, uint8_t col, float f, uint8_t decimal);
-    
+
     /**
      * Print a string in one line.
-     * Note that the char must be letter or number, special chars may be ignored. 
+     * Note that the char must be letter or number, special chars may be ignored.
      * To display multilines and special chars, please use base64_string API.
-     * 
+     *
      * @param row - 0~7
      * @param col - 0~15
      * @param str - the string to display
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_string(uint8_t row, uint8_t col, char *str);
-    
+
     /**
-     * Print a multiline string encoded in base64. 
-     * Special chars is supported. 
-     * 
+     * Print a multiline string encoded in base64.
+     * Special chars is supported.
+     *
      * @param row - 0~7
      * @param col - 0~15
      * @param b64_str - base64 encoded string, the max length is 256
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_base64_string(uint8_t row, uint8_t col, char *b64_str);
-    
+
     /**
      * Let the specified rows to scroll left horizontally
-     * 
+     *
      * @param start_row - upper row index, 0~7
      * @param end_row - lower row index (closed range), 0~7, must be greater or equal start_row.
      * @param speed - 0~255
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_scroll_left(uint8_t start_row, uint8_t end_row, uint8_t speed);
-    
+
     /**
      * Let the specified rows to scroll right horizontally
-     * 
+     *
      * @param start_row - upper row index, 0~7
      * @param end_row - lower row index (closed range), 0~7, must be greater or equal start_row.
      * @param speed - 0~255
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_scroll_right(uint8_t start_row, uint8_t end_row, uint8_t speed);
-    
+
     /**
      * Stop all scrolling rows.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_stop_scroll();
-    
+
     /**
      * Set the screen to display in inverse mode.
-     * 
+     *
      * @param inverse_or_not - 1: inverse(white background), 0: normal(black background)
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_inverse_display(uint8_t inverse_or_not);
-    
+
     char *get_last_error() { return error_desc; };
-    
+
 
 private:
     I2C_T *i2c;
-    
+
     uint8 addressingMode = PAGE_MODE;
     char *error_desc;
     int last_row;
@@ -196,23 +196,23 @@ private:
     void oled_128x64_hmode();
     // page mode
     void oled_128x64_pagemode();
-    
+
     void oled_128x64_XY(uint8_t row, uint8_t column);
-    
+
     void oled_128x64_char(uint8_t c);
-    
+
     uint8_t oled_128x64_num(int32_t long_num);
-    
+
     void oled_128x64_string(const char *str);
-    
+
     void oled_128x64_hsp(bool direction, uint8_t startPage, uint8_t endPage, uint8_t scrollSpeed);
-    
+
     void oled_128x64_active_scroll();
-    
+
     void oled_128x64_deactive_scroll();
-    
+
     void oled_128x64_normal_display();
-    
+
     void oled_128x64_inversel_display();
 };
 
