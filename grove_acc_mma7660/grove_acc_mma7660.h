@@ -1,4 +1,4 @@
-﻿/*
+/*
  * grove_acc_mma7660.h
  *
  * Copyright (c) 2012 seeed technology inc.
@@ -32,7 +32,7 @@
 
 #include "suli2.h"
 
-//GROVE_NAME        "Grove-3Axis Digital Acc(±1.5g)"
+//GROVE_NAME        "Grove-3Axis Digital Acc(�1.5g)"
 //SKU               101020039
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/bb/3_aix_acc.jpg
@@ -68,10 +68,10 @@ class GroveAccMMA7660
 {
 public:
     GroveAccMMA7660(int pinsda, int pinscl);
-    
+
     bool on_power_on();
     bool on_power_off();
-    
+
 
     /**
      * read the acceleration in unit g
