@@ -37,6 +37,8 @@
 //SKU               101020034
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/b/be/Axis_compass.jpg/400px-Axis_compass.jpg
+//DESCRIPTION       "This 3-axis digital compass features a low field magnetic sensing multi-chip module HMC5883L, which provides up to 1° to 2° heading accuracy. HMC5883L consists of high-resolution HMC118X series magneto-resistive sensors, as well as Honeywell developed ASIC containing amplification, automatic degaussing strap drivers, offset cancellation and 12 bit ADC."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Compass_V1.0
 
 #define HMC5883L_ADDRESS (0x1E<<1)
 
