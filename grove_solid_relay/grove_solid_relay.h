@@ -36,6 +36,8 @@
 //SKU               103020004
 //IF_TYPE           GPIO
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/1/13c15e71c4bd4c0a0fce5faa0283f4c5.image.530x397.jpg
+//DESCRIPTION       "Grove – Solid State Relay is a non-contact electronic switch module that has relay features. Based on S208T02, it has a maximum output of 250VAC/4A, with a switching speed less than 10ms. This module is equipped with acrylic base and a 3D-printed protection insulation shield, for user’s safety. The featured LED indicates that the relay is on. It can be widely used in various areas such as computer peripheral interfaces, temperature/speed/light adjustment, servo control, petrochemical, medical instrumentations, financial devices, coal, meters, traffic signals, etc."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Solid_State_Relay
 
 
 class GroveSolidStateRelay
