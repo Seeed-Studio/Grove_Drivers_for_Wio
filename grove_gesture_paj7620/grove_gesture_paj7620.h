@@ -89,7 +89,7 @@
 
 typedef enum {
 	BANK0 = 0,
-	BANK1,		
+	BANK1,
 } bank_e;
 
 typedef enum {
@@ -116,7 +116,7 @@ typedef enum {
 #define GES_WAVE_FLAG				PAJ7620_VAL(1,0)
 
 #define GES_REACTION_TIME		500				// You can adjust the reaction time according to the actual circumstance.
-#define GES_ENTRY_TIME			800				// When you want to recognize the Forward/Backward gestures, your gestures' reaction time must less than GES_ENTRY_TIME(0.8s). 
+#define GES_ENTRY_TIME			800				// When you want to recognize the Forward/Backward gestures, your gestures' reaction time must less than GES_ENTRY_TIME(0.8s).
 #define GES_QUIT_TIME			1000
 
 
@@ -124,14 +124,35 @@ class GroveGesture
 {
 public:
     GroveGesture(int pinsda, int pinscl);
+
+    /**
+     * Read the motion code. The upper direction is the one in which you read the silk-screen "U1".
+     *
+     * @param motion - 1-right, 2-left, 3-up, 4-down, 5-forward, 6-backward, 7-clockwise, 8-countclockwise, 255-sensor initialization fail
+     *
+     * @return bool
+     */
     bool read_motion(uint8_t *motion);
-private:
+
+    /**
+     * An event occurred when guesture detected.
+     */
+    DEFINE_EVENT(gesture, SULI_EDT_UINT8);
+
+
     I2C_T *i2c;
-    bool _init(void);
-    bool pajWakeUp();
-    void pajSelectBank(uint8_t bank);
-    bool pajWriteCmd(uint8_t addr, uint8_t cmd);
-    bool pajReadData(uint8_t addr, uint8_t qty, uint8_t data[]);
+    TIMER_T *timer;
+    bool isWaken;
+    bool new_data_available;
+    uint8_t cur_motion, last_motion;
+    bool _init(void) ICACHE_RAM_ATTR;
+    bool pajWakeUp() ICACHE_RAM_ATTR;
+    void pajSelectBank(uint8_t bank) ICACHE_RAM_ATTR;
+    bool pajWriteCmd(uint8_t addr, uint8_t cmd)  ICACHE_RAM_ATTR;
+    bool pajReadData(uint8_t addr, uint8_t qty, uint8_t data[])  ICACHE_RAM_ATTR;
+    void check_motion() ICACHE_RAM_ATTR;
 };
+
+static void grove_guesture_timer_interrupt_handler(void *para) ICACHE_RAM_ATTR;
 
 #endif

@@ -258,10 +258,13 @@ GroveGesture::GroveGesture(int pinsda, int pinscl)
 {
     this->i2c = (I2C_T *)malloc(sizeof(I2C_T));
     suli_i2c_init(i2c, pinsda, pinscl);
-    
-    delay(5);
-    
-    _init();
+    this->timer = (TIMER_T *)malloc(sizeof(TIMER_T));
+
+    isWaken = false;
+    new_data_available = false;
+    cur_motion = last_motion = 255;
+
+    suli_timer_install(timer, 1000000, grove_guesture_timer_interrupt_handler, this, true);
 }
 
 bool GroveGesture::_init(void)
@@ -269,162 +272,62 @@ bool GroveGesture::_init(void)
     //Near_normal_mode_V5_6.15mm_121017 for 940nm
     uint8_t error;
     uint8_t data0 = 0, data1 = 0;
-	
+
     //wakeup the sensor
-    if(!pajWakeUp()) {
-#if USE_DEBUG
+    if(!pajWakeUp())
+    {
         Serial1.println("err: wakeup failed!");
-#endif
         return false;
     }
-#if USE_DEBUG
+
+    isWaken = true;
+
 	Serial1.println("wakeuped");
-#endif	
-	//check the addrs
+
+    //check the addrs
     error = pajReadData(0, 1, &data0);
-#if USE_DEBUG
-	Serial1.print("Addr0 =");
-    Serial1.print(data0 , HEX);
-#endif
     if (error != true) {
-#if USE_DEBUG
-		Serial1.print("error != true1");
-#endif
+		Serial1.print("error1");
         return false;
     }
     error = pajReadData(1, 1, &data1);
-#if USE_DEBUG
-	Serial1.print(",  Addr1 =");
-    Serial1.println(data1 , HEX);
-#endif
     if (error != true) {
-#if USE_DEBUG
-		Serial1.print("error != true2");
-#endif
+		Serial1.print("error2");
         return false;
     }
     if ( (data0 != 0x20 ) || (data1 != 0x76) )
         return false;
-    
+
 	//setup the gesture sensor
     for (int i = 0; i < INIT_REG_ARRAY_SIZE; i++) {
         pajWriteCmd(init_register_array[i][0], init_register_array[i][1]);
     }
-	
+
 	//reselect the bank0 to read data
 	pajSelectBank(BANK0);
-	
+
 #if USE_DEBUG
-    Serial1.println("Paj7620 initialize register.");
+    Serial1.println("paj7620 initialization done.");
 #endif
     return true;
 }
 
 bool GroveGesture::read_motion(uint8_t *motion)
 {
-	uint8_t data = 0, data1 = 0, error;
-	
-	error = pajReadData(0x43, 1, &data);				// Read Bank_0_Reg_0x43/0x44 for gesture result.
-	if (error == true)
-	{
-		*motion = Gesture_None;
-		switch (data) 									// When different gestures be detected, the variable 'data' will be set to different values by pajReadData(0x43, 1, &data).
-		{
-			case GES_RIGHT_FLAG:
-				/*delay(GES_ENTRY_TIME);
-				pajReadData(0x43, 1, &data);
-				if(data == GES_FORWARD_FLAG) 
-				{
-					*motion = Gesture_Foward;
-					delay(GES_QUIT_TIME);
-				}
-				else if(data == GES_BACKWARD_FLAG) 
-				{
-					*motion = Gesture_Backward;
-					delay(GES_QUIT_TIME);
-				}
-				else*/
-				{
-					*motion = Gesture_Right;
-				}          
-				break;
-			case GES_LEFT_FLAG: 
-				/*delay(GES_ENTRY_TIME);
-				pajReadData(0x43, 1, &data);
-				if(data == GES_FORWARD_FLAG) 
-				{
-					*motion = Gesture_Foward;
-					delay(GES_QUIT_TIME);
-				}
-				else if(data == GES_BACKWARD_FLAG) 
-				{
-					*motion = Gesture_Backward;
-					delay(GES_QUIT_TIME);
-				}
-				else*/
-				{
-					*motion = Gesture_Left;
-				}          
-				break;
-			case GES_UP_FLAG:
-				/*delay(GES_ENTRY_TIME);
-				pajReadData(0x43, 1, &data);
-				if(data == GES_FORWARD_FLAG) 
-				{
-					*motion = Gesture_Foward;
-					delay(GES_QUIT_TIME);
-				}
-				else if(data == GES_BACKWARD_FLAG) 
-				{
-					*motion = Gesture_Backward;
-					delay(GES_QUIT_TIME);
-				}
-				else*/
-				{
-					*motion = Gesture_Up;
-				}          
-				break;
-			case GES_DOWN_FLAG:
-				/*delay(GES_ENTRY_TIME);
-				pajReadData(0x43, 1, &data);
-				if(data == GES_FORWARD_FLAG) 
-				{
-					*motion = Gesture_Foward;
-					delay(GES_QUIT_TIME);
-				}
-				else if(data == GES_BACKWARD_FLAG) 
-				{
-					*motion = Gesture_Backward;
-					delay(GES_QUIT_TIME);
-				}
-				else*/
-				{
-					*motion = Gesture_Down;
-				}          
-				break;
-			case GES_FORWARD_FLAG:
-				*motion = Gesture_Foward;
-				delay(GES_QUIT_TIME);
-				break;
-			case GES_BACKWARD_FLAG:		  
-				*motion = Gesture_Backward;
-				delay(GES_QUIT_TIME);
-				break;
-			case GES_CLOCKWISE_FLAG:
-				*motion = Gesture_Clockwise;
-				break;
-			case GES_COUNT_CLOCKWISE_FLAG:
-				*motion = Gesture_CountClockwize;
-				break;  
-			default:
-				pajReadData(0x44, 1, &data1);
-				if (data1 == GES_WAVE_FLAG) 
-				{
-					*motion = Gesture_Wave;
-				}
-				break;
-		}
-	}
+    if (!isWaken)
+    {
+        *motion = 255;
+        return true;
+    }
+
+    if (new_data_available)
+    {
+        *motion = last_motion;
+        new_data_available = false;
+    } else
+    {
+        *motion = 0;
+    }
     return true;
 }
 
@@ -436,7 +339,7 @@ Return: uint8_t
 bool GroveGesture::pajWakeUp() {
     uint8_t data;
     uint8_t rtn = suli_i2c_read(this->i2c, PAJ7620_ID, &data, 1);
-    if(rtn == 1 && data != 0x20)
+    if(rtn == 1 && data == 0x20)
         return true;
     else
         return false;
@@ -478,4 +381,71 @@ bool GroveGesture::pajReadData(uint8_t addr, uint8_t qty, uint8_t data[]) {
         return false;
 }
 
+void GroveGesture::check_motion()
+{
+    if (!isWaken)
+    {
+        cur_motion = 255;
+        _init();
+        return;
+    }
+
+    uint8_t data = 0, data1 = 0, error;
+
+	error = pajReadData(0x43, 1, &data);				// Read Bank_0_Reg_0x43/0x44 for gesture result.
+	if (error == true)
+	{
+		cur_motion = Gesture_None;
+		switch (data) 									// When different gestures be detected, the variable 'data' will be set to different values by pajReadData(0x43, 1, &data).
+		{
+			case GES_RIGHT_FLAG:
+				cur_motion = Gesture_Right;
+				break;
+			case GES_LEFT_FLAG:
+				cur_motion = Gesture_Left;
+				break;
+			case GES_UP_FLAG:
+				cur_motion = Gesture_Up;
+				break;
+			case GES_DOWN_FLAG:
+				cur_motion = Gesture_Down;
+				break;
+			case GES_FORWARD_FLAG:
+				cur_motion = Gesture_Foward;
+				break;
+			case GES_BACKWARD_FLAG:
+				cur_motion = Gesture_Backward;
+				break;
+			case GES_CLOCKWISE_FLAG:
+				cur_motion = Gesture_Clockwise;
+				break;
+			case GES_COUNT_CLOCKWISE_FLAG:
+				cur_motion = Gesture_CountClockwize;
+				break;
+			default:
+				pajReadData(0x44, 1, &data1);
+				if (data1 == GES_WAVE_FLAG)
+				{
+					cur_motion = Gesture_Wave;
+				}
+				break;
+		}
+	}
+
+    //Serial1.println(last_motion);
+
+    if (cur_motion != 0)
+    {
+        new_data_available = true;
+        POST_EVENT(gesture, &cur_motion);
+        last_motion = cur_motion;
+    }
+}
+
+static void grove_guesture_timer_interrupt_handler(void *para)
+{
+    GroveGesture *g = (GroveGesture *)para;
+
+    g->check_motion();
+}
 
