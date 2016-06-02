@@ -37,7 +37,8 @@
 //SKU               101020083
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/depot/images/product/101020083%201_01.jpg
-
+//DESCRIPTION       "The sensor on Grove - Gesture is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures ,and these gestures information can be simply accessed via the I2C bus."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Gesture_v1.0
 
 // REGISTER DESCRIPTION
 #define PAJ7620_VAL(val, maskbit)		( val << maskbit )
