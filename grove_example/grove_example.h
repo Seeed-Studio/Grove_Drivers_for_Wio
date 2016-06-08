@@ -36,6 +36,8 @@
 //SKU               71714fec-8911-11e5-af63-feff819cdc9f
 //IF_TYPE           GPIO
 //IMAGE_URL         http://www.seeedstudio.com/depot/includes/templates/bootstrap/images/ico/grove.png
+//DESCRIPTION       "The Grove Example is test driver for develop, not public."
+//WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Example
 
 class GroveExample
 {

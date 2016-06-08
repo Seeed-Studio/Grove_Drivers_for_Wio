@@ -36,6 +36,8 @@
 //SKU               101020010
 //IF_TYPE           GPIO
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/3/3a/Ultrasonic_Ranger.jpg/350px-Ultrasonic_Ranger.jpg
+//DESCRIPTION       "This Grove - Ultrasonic sensor is a non-contact distance measurement module which works at 42KHz, suitable for projects that require middle distance measurement."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger
 
 class GroveUltraRanger
 {

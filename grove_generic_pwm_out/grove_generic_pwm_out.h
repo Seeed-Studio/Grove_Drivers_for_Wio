@@ -36,7 +36,8 @@
 //SKU               63e25800-a2d2-11e5-bf7f-feff819cdc9f
 //IF_TYPE           GPIO
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/b4/Generic_analog_output.png
-
+//DESCRIPTION       "The Grove Generic PWM can output a pwm signal whit specified frequency and duty. It also can be read for current state."
+//WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_PWM
 
 class GenericPWMOut
 {

@@ -35,7 +35,8 @@
 //SKU               101020030
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/6/69/Digital_Light_Sensor.jpg
-
+//DESCRIPTION       "This module is based on the I2C light-to-digital converter TSL2561 to transform light intensity to a digital signal, features a selectable light spectrum range due to its dual light sensitive diodes: infrared and full spectrum."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor
 
 #include "suli2.h"
 
