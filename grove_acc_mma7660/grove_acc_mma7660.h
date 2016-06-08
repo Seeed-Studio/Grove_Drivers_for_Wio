@@ -32,10 +32,12 @@
 
 #include "suli2.h"
 
-//GROVE_NAME        "Grove-3Axis Digital Acc(�1.5g)"
+//GROVE_NAME        "Grove-3Axis Digital Acc(±1.5g)"
 //SKU               101020039
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/bb/3_aix_acc.jpg
+//DESCRIPTION       "This 3-Axis Digital Accelerometer(±1.5g) is based on Freescale's low power consumption module, MMA7660FC. It features up to 10,000g high shock survivability and configurable Samples per Second rate. Test Range: ±1.5g, Sensitivity: 21LSB/g"
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±1.5g)
 
 #define MMA7660_ADDR  (0x4c<<1)
 

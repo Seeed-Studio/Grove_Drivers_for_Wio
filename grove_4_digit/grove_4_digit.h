@@ -36,6 +36,8 @@
 //SKU               104030003
 //IF_TYPE           UART
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/3/3a9f79323a82950c12fc7e69fa9fab4d.image.530x397.jpg
+//DESCRIPTION       "4 digit display module is usually a 12 pin module. In this Grove gadget, we utilize a TM1637 to scale down the controlling pins into 2 Grove pins. It only takes 2 digital pins of Arduino or Seeeduino to control the content, even the luminance of this display. For projects that require of alpha-numeric display, this can be a nice choice."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_4-Digit_Display
 
 // Avoid name conflict
 #define GLB_CMDMODE 0x00  // Work on 8-bit mode
@@ -47,62 +49,62 @@ class Grove4Digit
 public:
 
     Grove4Digit(int pintx, int pinrx);
-    
+
     bool on_power_on();
     bool on_power_off();
-    
+
     /**
      * Display the ":" point or not
-     * 
+     *
      * @param display - 0: not, 1: display
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_display_point(uint8_t display);
-    
+
     /**
-     * Display one digit. 
-     * 
+     * Display one digit.
+     *
      * @param position - 0~3, 0 is the most left
      * @param chr - the character, can be 0~9,A,b,C,d,E,F,V,U.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_display_one_digit(uint8_t position, char *chr);
-    
+
     /**
      * Display multiple digits.
-     * 
+     *
      * @param start_pos - 0~3, 0 is the most left
      * @param chars - the characters, can be 0~9,A,b,C,d,E,F,V,U.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_display_digits(uint8_t start_pos, char *chars);
-    
+
     /**
      * Clear all digits and ":" point.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_clear();
-    
+
     /**
      * Set the brightness.
-     * 
+     *
      * @param brightness - can be 0,2,7, 7 is the brightest.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_brightness(uint8_t brightness);
-    
+
     char *get_last_error() { return error_desc; };
 
 private:
 
     IO_T *io_clk;  // Clock pin
     IO_T *io_data;   // Data pin
-    uint8_t Cmd_DispCtrl;        
+    uint8_t Cmd_DispCtrl;
     uint8_t _PointFlag;     //_PointFlag=1:the clock point on
     uint8_t data[5];
     char *error_desc;

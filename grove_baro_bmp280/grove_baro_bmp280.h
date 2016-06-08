@@ -36,7 +36,8 @@
 //SKU               101020192
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/a/a4/Bmp280.jpg/610px-Bmp280.jpg
-
+//DESCRIPTION       "This sensor is high-precision and low-power digital barometer, can be used to detect temperature and atmospheric pressure accurately. As atmospheric pressure changes with altitude, it can also detect approximate altitude of a place."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor_(BMP280)
 
 
 #define BMP280_ADDRESS   (0x77<<1)
