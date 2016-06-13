@@ -42,3 +42,8 @@ bool GroveRelay::write_onoff(int onoff)
     return true;
 }
 
+bool GroveRelay::read_onoff_status(int *onoff)
+{
+    *onoff = suli_pin_read(io);
+    return true;
+}
