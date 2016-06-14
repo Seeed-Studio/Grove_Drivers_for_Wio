@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove_Relay"
 //SKU               103020005
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/d/df3ef3f9ba7f58333235895c0d3c4fb2.image.530x397.jpg
+//IMAGE_URL         http://www.seeedstudio.com/wiki/images/e/ea/Relay-img.jpg
 //DESCRIPTION       "The Relay is a digital normally open switch that controls a relay capable of switching much higher voltages and currents than your normal Arduino boards. When set to HIGH, the LED will light up and the relay will close allowing current to flow. The peak voltage capability is 250V at 10 amps."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Relay
 
@@ -43,25 +43,25 @@ class GroveRelay
 {
 public:
     GroveRelay(int pin);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param onoff - 1: on, 0: off
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_onoff(int onoff);
-    
+
     /**
      * Read back the status of relay
-     * 
+     *
      * @param onoff - 1: on/high, 0: off/low
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_onoff_status(int *onoff);
-    
+
 private:
     IO_T *io;
 };
