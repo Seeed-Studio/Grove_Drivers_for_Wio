@@ -36,30 +36,30 @@
 //GROVE_NAME        "Grove - Air Quality Sensor"
 //SKU               101020078
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/depot/images/product/101020078%201_02.jpg
+//IMAGE_URL         http://www.seeedstudio.com/wiki/images/7/73/Air-quality-img.jpg
 //DESCRIPTION       "This sensor is designed for comprehensive monitor over indoor air condition. It's responsive to a wide scope of harmful gases, as carbon monoxide, alcohol, acetone, thinner, formaldehyde and so on. Due to the measuring mechanism, this sensor can not output specific data to describe target gases' concentrations quantitatively. But it's still competent enough to be used in applications that require only qualitative results, like auto refresher sprayers and auto air cycling systems."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Air_Quality_Sensor
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Air_Quality_Sensor_v1.3
 
 class GroveAirquality
 {
 public:
     GroveAirquality(int pin);
-    
+
     bool on_power_on();
     bool on_power_off();
-    
+
     /**
-     * Get the analog reading of air quality. The air quality sensor is is designed for comprehensive 
-     * monitor over indoor air condition. It's responsive to a wide scope of harmful gases, as carbon 
-     * monixide, alcohol, acetone, thinner, formaldehyde and so on. Due to the measuring mechanism, this 
-     * sensor can not output specific data to describe target gases' concentrations quantitatively. But 
-     * it's still competent enough to be used in applications that require only qualitative results, 
-     * like auto refresher sprayers and auto air cycling systems. If exposed for a long time to pollution, 
+     * Get the analog reading of air quality. The air quality sensor is is designed for comprehensive
+     * monitor over indoor air condition. It's responsive to a wide scope of harmful gases, as carbon
+     * monixide, alcohol, acetone, thinner, formaldehyde and so on. Due to the measuring mechanism, this
+     * sensor can not output specific data to describe target gases' concentrations quantitatively. But
+     * it's still competent enough to be used in applications that require only qualitative results,
+     * like auto refresher sprayers and auto air cycling systems. If exposed for a long time to pollution,
      * it will be damaged.
-     * 
+     *
      * @param quality - analog reading of this sensor, please use the data as a comparative	quantity, because it is a qualitative results
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_quality(int *quality);
     char *get_last_error() { return error_desc; };

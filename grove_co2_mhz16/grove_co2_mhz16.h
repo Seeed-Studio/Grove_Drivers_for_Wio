@@ -35,7 +35,10 @@
 //GROVE_NAME        "Grove - CO2 MH-Z16"
 //SKU               101020067
 //IF_TYPE           UART
-//IMAGE_URL         https://www.seeedstudio.com/images/product/Grove%20CO2%20Sensor.jpg
+//IMAGE_URL         http://statics3.seeedstudio.com/images/product/Grove%20CO2%20Sensor.jpg
+//DESCRIPTION       "The Grove - CO2 Sensor module is infrared CO2 sensor with high sensitivity and high resolution."
+//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_CO2_Sensor
+
 
 class GroveCo2MhZ16
 {
@@ -53,9 +56,9 @@ public:
      */
 
     bool read_concentration_and_temperature(float *concentration,float *temperature);
-    
+
     /**
-     * Get concentration 
+     * Get concentration
      *
      * @param concentration - unit: PPM
      *
@@ -73,24 +76,24 @@ public:
      */
 
     bool read_temperature(float *temperature);
-    
+
     /**
      * Get last error.
      *
      * @return char*
      */
-    
+
     const char* get_last_error(void);
 
 private:
 
     UART_T *uart;
-    
+
     void _drain_uart();
     bool _update_from_sensor(void);
 
     float CO2PPM;
-    float temp; 
+    float temp;
     const char* last_error;
 };
 
