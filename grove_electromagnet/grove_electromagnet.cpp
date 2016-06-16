@@ -42,3 +42,9 @@ bool GroveElecMagnet::write_onoff(int onoff)
     return true;
 }
 
+bool GroveElecMagnet::read_onoff_status(int *onoff)
+{
+    *onoff = suli_pin_read(io);
+    return true;
+}
+

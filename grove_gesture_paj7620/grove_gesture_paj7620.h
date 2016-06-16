@@ -147,11 +147,11 @@ public:
     bool new_data_available;
     uint8_t cur_motion, last_motion;
     bool _init(void) ICACHE_RAM_ATTR;
-    bool pajWakeUp()ICACHE_RAM_ATTR;
-    void pajSelectBank(uint8_t bank)ICACHE_RAM_ATTR;
-    bool pajWriteCmd(uint8_t addr, uint8_t cmd)ICACHE_RAM_ATTR;
-    bool pajReadData(uint8_t addr, uint8_t qty, uint8_t data[])ICACHE_RAM_ATTR;
-    void check_motion()ICACHE_RAM_ATTR;
+    bool pajWakeUp() ICACHE_RAM_ATTR;
+    void pajSelectBank(uint8_t bank) ICACHE_RAM_ATTR;
+    bool pajWriteCmd(uint8_t addr, uint8_t cmd) ICACHE_RAM_ATTR;
+    bool pajReadData(uint8_t addr, uint8_t qty, uint8_t data[]) ICACHE_RAM_ATTR;
+    void check_motion() ICACHE_RAM_ATTR;
 };
 
 static void grove_guesture_timer_interrupt_handler(void *para) ICACHE_RAM_ATTR;

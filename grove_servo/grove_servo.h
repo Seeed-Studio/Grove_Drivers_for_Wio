@@ -43,35 +43,45 @@ class GroveServo
 {
 public:
     GroveServo(int pin);
-    
+
     /**
      * Drive the servo to rotate a specified angle and hold on the servo driven PWM signal. <br>
-     * The PWM signal maybe polluted by other PWM API calls if the others use different frequency. <br> 
+     * The PWM signal maybe polluted by other PWM API calls if the others use different frequency. <br>
      * e.g. Grove - Infrared Emitter may affect the action of servo as it's using 38KHz PWM.
-     * 
+     *
      * @param degree - the angle in unit degress
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_angle(int degree);
-    
+
     /**
-     * Drive the servo to rotate a specified angle and shut down the servo driven PWM signal in specified seconds time. <br> 
-     * For normal servos, this API still works even if the PWM signal is off. But the servo losts the strength that holding the position. <br> 
+     * Drive the servo to rotate a specified angle and shut down the servo driven PWM signal in specified seconds time. <br>
+     * For normal servos, this API still works even if the PWM signal is off. But the servo losts the strength that holding the position. <br>
      * This API will avoid the servo from the influence of other PWM modules, e.g. Grove - Infrared Emitter
-     * 
+     *
      * @param degree - the angle in unit degress
      * @param seconds - the duration of the motion
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_angle_motion_in_seconds(int degree, int seconds);
+
+    /**
+     * Read back the angle of this servo
+     *
+     * @param degree - the angle in unit degress
+     *
+     * @return bool
+     */
+    bool read_angle(int *degree);
 
 
 
     PWM_T *io;
     TIMER_T *timer;
-    
+    int last_degree;
+
 };
 
 static void grove_servo_timer_interrupt_handler(void *para);

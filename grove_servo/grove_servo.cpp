@@ -38,13 +38,14 @@ GroveServo::GroveServo(int pin)
     suli_pwm_init(this->io, pin);
     suli_pwm_frequency(this->io, 50);
     //suli_pin_write(this->io, SULI_LOW);
-    
+    last_degree = 0;
 }
 
 
 
 bool GroveServo::write_angle(int degree)
 {
+    last_degree = degree;
     degree = constrain(degree, 20, 160);
     float percent = 10 * degree / 180 + 2.5;
     suli_pwm_frequency(this->io, 50);
@@ -54,21 +55,26 @@ bool GroveServo::write_angle(int degree)
 
 bool GroveServo::write_angle_motion_in_seconds(int degree, int seconds)
 {
+    last_degree = degree;
     degree = constrain(degree, 20, 160);
     float percent = 10 * degree / 180 + 2.5;
     suli_pwm_frequency(this->io, 50);
     suli_pwm_output(this->io, percent);
-    
+
     suli_timer_install(timer, seconds * 1000000, grove_servo_timer_interrupt_handler, this, false);
-    
+
     return true;
 }
 
+bool GroveServo::read_angle(int *degree)
+{
+    *degree = last_degree;
+    return true;
+}
 
 static void grove_servo_timer_interrupt_handler(void *para)
 {
     GroveServo *g = (GroveServo *)para;
     suli_pwm_output(g->io, 0);
 }
-
 
