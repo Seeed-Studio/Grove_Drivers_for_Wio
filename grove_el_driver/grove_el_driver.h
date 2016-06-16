@@ -52,6 +52,15 @@ public:
      * @return bool 
      */
     bool write_onoff(int onoff);
+    
+    /**
+     * Read back the status of el wire
+     *
+     * @param onoff - 1: on/high, 0: off/low
+     *
+     * @return bool
+     */
+    bool read_onoff_status(int *onoff);
 private:
     IO_T *io;
 };
