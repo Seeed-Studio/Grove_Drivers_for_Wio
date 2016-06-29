@@ -38,31 +38,33 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/3/3a/Ultrasonic_Ranger.jpg/350px-Ultrasonic_Ranger.jpg
 //DESCRIPTION       "This Grove - Ultrasonic sensor is a non-contact distance measurement module which works at 42KHz, suitable for projects that require middle distance measurement."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger
+//ADDED_AT          "2015-11-01"
+//AUTHOR            "SEEED"
 
 class GroveUltraRanger
 {
 public:
     GroveUltraRanger(int pin);
-    
+
     /**
      * Get the range / distance between sensor and object.
-     * 
+     *
      * @param range_cm - unit: cm
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_range_in_cm(float *range_cm);
-    
+
     /**
      * Get the range / distance between sensor and object.
-     * 
+     *
      * @param range_cm - unit: inch
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_range_in_inch(float *range_inch);
     IO_T *io;
-    
+
 private:
     uint32_t _get_pulse_width();
 };

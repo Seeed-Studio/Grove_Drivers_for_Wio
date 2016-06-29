@@ -39,6 +39,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/3/36/Temp%26Humi.jpg
 //DESCRIPTION       "This is a multifunctional sensor that gives you temperature and relative humidity information at the same time. It utilizes a DHT11 sensor that can meet measurement needs of general purposes. It provides reliable readings when environment humidity condition in between 20% RH and 90% RH, and temperature condition in between 0°C and 50°C, covering needs in most home and daily applications that don't contain extreme conditions."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #define MAXTIMINGS 85
 #define DHT11 11
@@ -59,31 +61,31 @@ class GroveTempHum
 {
 public:
     GroveTempHum(int pin);
-    
+
     /**
      * The basic temperature and humidity sensor will update the reading every 2 seconds.
-     * 
+     *
      * @param celsius_degree - unit: Celsius degree
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_temperature(float *celsius_degree);
-    
+
     /**
      * The basic temperature and humidity sensor will update the reading every 2 seconds.
-     * 
+     *
      * @param fahrenheit_degree - Fahrenheit degree
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_temperature_f(float *fahrenheit_degree);
-    
+
     /**
      * The basic temperature and humidity sensor will update the reading every 2 seconds.
-     * 
+     *
      * @param humidity - 0~100(%)
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_humidity(float *humidity);
 

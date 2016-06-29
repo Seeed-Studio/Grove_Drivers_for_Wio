@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/e7/Grove-Barometer.jpg/621px-Grove-Barometer.jpg
 //DESCRIPTION       "This Sensor features a Bosch BMP085 high-accuracy chip to detect barometric pressure and temperature. It can widely measure pressure ranging from 300hPa to 1100hPa, AKA +9000m to -500m above sea level, with a super high accuracy of 0.03hPa(0.25m) in ultra-high resolution mode."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 
 #define BMP085_ADDRESS (0x77<<1)
@@ -46,31 +48,31 @@ class GroveBaroBMP085
 {
 public:
     GroveBaroBMP085(int pinsda, int pinscl);
-    
+
     /**
      * Read a rough temperature value of the envirenment
-     * 
+     *
      * @param temperature - unit: Celsius degree
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_temperature(float *temperature);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param pressure - unit: Pa
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_pressure(int32_t *pressure);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param altitude - the absolute altitude, unit: m
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_altitude(float *altitude);
 private:

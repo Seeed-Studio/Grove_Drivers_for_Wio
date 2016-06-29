@@ -37,6 +37,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/f/f6/Gbgr.jpg/500px-Gbgr.jpg
 //DESCRIPTION       "Grove - 3-Axis Digital Gyro module based on ITG 3200. It is the world’s first single-chip, digital-output, 3-axis MEMS motion processing gyro optimised for gaming, 3D mice, and motion-based remote control applications for Internet connected Digital TVs and Set Top Boxes. The ITG-3200 features three 16-bit analog-to-digital converters (ADCs) for digitising the gyro outputs, a user-selectable internal low-pass filter bandwidth, and a Fast-Mode I2C (400kHz) interface."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Gyro
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #include "suli2.h"
 
@@ -63,31 +65,31 @@ class GroveGyroITG3200
 {
 public:
     GroveGyroITG3200(int pinsda, int pinscl);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param gx unit: deg/s
      * @param gy unit: deg/s
      * @param gz unit: deg/s
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_gyro(float *gx, float *gy, float *gz);  //unit: deg/s
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param temp unit: Celsius degree
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_temperature(float *temp);  //unit: C
-    
+
     /**
      * Calibrate the static offsets, need to hold the sensor steadily.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_zerocalibrate();
 

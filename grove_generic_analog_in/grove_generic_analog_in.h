@@ -38,18 +38,20 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/8/87/Pion_one_generic_analog.png
 //DESCRIPTION       "The Grove Generic Analog In can read external analog value, range on 0~1023."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_Analog_In
+//ADDED_AT          "2015-12-01"
+//AUTHOR            "SEEED"
 
 class GenericAIn
 {
 public:
     GenericAIn(int pin);
-    
+
     /**
      * Read the ADC measurement of a generic analog device. The full range is 0~1023.
-     * 
+     *
      * @param analog - The measurement of ADC, 0~1023
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_analog(int *analog);
 private:

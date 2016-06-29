@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/images/product/104020006%201.jpg
 //DESCRIPTION       "Grove – LED Bar is comprised of a 10 segment LED gauge bar and an MY9221 LED controlling chip. It can be used as an indicator for remaining battery life, voltage, water level, music volume or other values that require a gradient display. There are 10 LED bars in the LED bar graph: one red, one yellow, one light green, and seven green bars. Demo code is available to get you up and running quickly. It lights up the LEDs sequentially from red to green, so the entire bar graph is lit up in the end. Want to go further? Go ahead and code your own effect."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_LED_Bar
+//ADDED_AT          "2016-01-08"
+//AUTHOR            "SEEED"
 
 // Avoid name conflict
 #define GLB_CMDMODE 0x00  // Work on 8-bit mode
@@ -52,56 +54,56 @@ public:
 
     /**
      * Change the orientation of the level display
-     * 
+     *
      * @param green_to_red - 1: green to red 0: red to green
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_orientation(uint8_t green_to_red);
 
     /**
      * Display a level
-     * 
+     *
      * @param level - 0~10, the decimal part will control the brightness of the last led, e.g. 9.5 will cause the 10th led light up in half brightness.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_level(float level);
 
     /**
      * Control a single led with brightness
-     * 
+     *
      * @param led - the index, 1~10
      * @param brightness - 0.0~1.0, 1.0 is the brightest, 0.0 let this led off
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_single_led(uint8_t led, float brightness);
 
     /**
      * Toggle a single led on or off.
-     * 
+     *
      * @param led - the index, 1~10
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_toggle(uint8_t led);
-    
+
     /**
      * Control the leds with the bit mask of a uint16_t integer number
-     * 
+     *
      * @param bits - each bit controls the led in that bit mask, bit value 0: off, bit value 1: on
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_bits(uint16_t bits);
-    
+
     /**
      * Read the states of each led, return bit mask of a uint16_t integer number.
-     * 
+     *
      * @param bits - each bit indicates the led status in that bit mask, bit value 0: off, bit value 1: on
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_bits(uint16_t *bits);
 

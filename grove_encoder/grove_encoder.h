@@ -38,63 +38,65 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/0/00a3a97e35f0ede1275ea4a989e4953c.image.530x397.jpg
 //DESCRIPTION       "This module is an incremental rotary encoder. It encodes the rotation signal from the axis and output the signal by electronic pulse. "
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Encoder
+//ADDED_AT          "2015-12-01"
+//AUTHOR            "SEEED"
 
 class GroveEncoder
 {
 public:
 
     GroveEncoder(int pintx, int pinrx);
-    
+
     bool on_power_on();
     bool on_power_off();
-    
+
     /**
-     * Read the position of the encoder. The position can be positive or negative number. 
-     * The position increases when rotate clockwise and decreases when rotate anti-clockwise. <br> 
-     * <br> 
-     * PLEASE NOTE: To use the encoder, you need either using battery to power the board or manually soldering to short R1 of Grove-Encoder. 
-     * This is due to the RX pin of UART interface is pulled up to CP2102's TX pin with a 1K resister and R1 on encoder board 
-     * with the value 3.3K will obstruct the encoder to correctly pull down the signal A pin. 
-     * 
-     * @param position 
-     * 
-     * @return bool 
+     * Read the position of the encoder. The position can be positive or negative number.
+     * The position increases when rotate clockwise and decreases when rotate anti-clockwise. <br>
+     * <br>
+     * PLEASE NOTE: To use the encoder, you need either using battery to power the board or manually soldering to short R1 of Grove-Encoder.
+     * This is due to the RX pin of UART interface is pulled up to CP2102's TX pin with a 1K resister and R1 on encoder board
+     * with the value 3.3K will obstruct the encoder to correctly pull down the signal A pin.
+     *
+     * @param position
+     *
+     * @return bool
      */
     bool read_position(int32_t *position);
-    
+
     /**
      * Reset the position to a specified number.
-     * 
-     * @param position 
-     * 
-     * @return bool 
+     *
+     * @param position
+     *
+     * @return bool
      */
     bool write_reset_position(int32_t position);
-    
+
     /**
      * Enable or disable the acceleration feature of the step counting.
-     * 
+     *
      * @param enable - 1: enable acceleration, 0: disable
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_enable_acceleration(uint8_t enable);
-    
+
     /**
-     * Report the current position when the knob idles for 100ms. The event data is the current position. 
-     * <br> 
-     * PLEASE NOTE: To use the encoder, you need either using battery to power the board or manually soldering to short R1 of Grove-Encoder. 
-     * This is due to the RX pin of UART interface is pulled up to CP2102's TX pin with a 1K resister and R1 on encoder board 
-     * with the value 3.3K will obstruct the encoder to correctly pull down the signal A pin. 
+     * Report the current position when the knob idles for 100ms. The event data is the current position.
+     * <br>
+     * PLEASE NOTE: To use the encoder, you need either using battery to power the board or manually soldering to short R1 of Grove-Encoder.
+     * This is due to the RX pin of UART interface is pulled up to CP2102's TX pin with a 1K resister and R1 on encoder board
+     * with the value 3.3K will obstruct the encoder to correctly pull down the signal A pin.
      */
     DEFINE_EVENT(encoder_position, SULI_EDT_INT32);
-    
-    
-private:    
+
+
+private:
     IO_T *io_a;  // siga pin
     IO_T *io_b;  // sigb pin
     TIMER_T *timer;
-    
+
     int32_t pos;
     bool pinsActive;
     volatile int16_t delta;
@@ -103,7 +105,7 @@ private:
     bool accelerationEnabled;
     volatile uint16_t acceleration;
     uint8_t ms_cnt;
-    
+
 public:
     void update() ICACHE_RAM_ATTR;
 

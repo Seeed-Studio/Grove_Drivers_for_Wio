@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/3/3ac50a997c78858b8f960475f878e369.image.530x397.jpg
 //DESCRIPTION       "The Grove I2C motor driver is a new addition to the Grove series with the same easy-to-use interface. Its heart is a dual channel H-bridge driver chip（L298N）that can handle current up to 2A per channel, controlled by an Atmel ATmega8L which handles the I2C communication with for example an Arduino. Both motors can be driven simultaneously while set to a different speed and direction. It can power two brushed DC motors or one 4-wire two-phase stepper motor. It requires a 6V to 15V power supply to power the motor and has an onboard 5V voltage regulator which can power the I2C bus and the Arduino(selectable by jumper). All driver lines are diode protected from back EMF."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver_V1.2
+//ADDED_AT          "2016-01-01"
+//AUTHOR            "SEEED"
 
 #define MotorSpeedSet             0x82
 #define PWMFrequenceSet           0x84
@@ -55,63 +57,63 @@ class GroveI2CMotorDriver
 {
 public:
     GroveI2CMotorDriver(int pinsda, int pinscl);
-    
+
     /**
      * Change ths default I2C address, the default address is 0xf
-     * 
+     *
      * @param addr_7bits the new 7bits i2c address
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_i2c_address(uint8_t addr_7bits);
-    
+
     /**
-     * To drive a stepper motor, we need to change the working mode of this driver into stepper mode. 
-     * IMPORTANT: Need I2C Motor Driver hardware version >= v1.3 and manually update the firmware according to the 
-     * guide inside this zip file: http://www.seeedstudio.com/wiki/images/5/52/On-Chipfirmware_for_Motor_driver.zip 
-     * 
+     * To drive a stepper motor, we need to change the working mode of this driver into stepper mode.
+     * IMPORTANT: Need I2C Motor Driver hardware version >= v1.3 and manually update the firmware according to the
+     * guide inside this zip file: http://www.seeedstudio.com/wiki/images/5/52/On-Chipfirmware_for_Motor_driver.zip
+     *
      * @param direction - stepper direction, 0 or 1
      * @param speed - defines the time interval the i2C motor driver change its output to drive the stepper, the actul interval time is : motorspeed * 4ms. that is , when motor speed is 10, the interval time would be 40 ms
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_enable_stepper_mode(uint8_t direction, uint8_t speed);
-    
+
     /**
      * Disable the stepper driving mode, back to default DC motor driving mode
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_disable_stepper_mode();
-    
+
     /**
-     * Drive the stepper to move a few steps. To let the stepper rotate forever, steps = 255. 
-     * IMPORTANT: Need I2C Motor Driver hardware version >= v1.3 and manually update the firmware according to the 
-     * guide inside this zip file: http://www.seeedstudio.com/wiki/images/5/52/On-Chipfirmware_for_Motor_driver.zip  
-     * 
+     * Drive the stepper to move a few steps. To let the stepper rotate forever, steps = 255.
+     * IMPORTANT: Need I2C Motor Driver hardware version >= v1.3 and manually update the firmware according to the
+     * guide inside this zip file: http://www.seeedstudio.com/wiki/images/5/52/On-Chipfirmware_for_Motor_driver.zip
+     *
      * @param steps - number of steps to move
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_stepper_steps(uint8_t steps);
-    
+
     /**
      * Change the speed of DC motor, note that the initial speed is 0 when the module is powered on.
-     * 
+     *
      * @param speed_m1 - 0~255
      * @param speed_m2 - 0~255
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_dcmotor_speed(uint8_t speed_m1, uint8_t speed_m2);
-    
+
     bool write_dcmotor1_change_direction();
     bool write_dcmotor2_change_direction();
     bool write_dcmotor1_break();
     bool write_dcmotor2_break();
     bool write_dcmotor1_resume();
     bool write_dcmotor2_resume();
-    
+
 private:
     I2C_T *i2c;
     uint8_t i2c_addr;

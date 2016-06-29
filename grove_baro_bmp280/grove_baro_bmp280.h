@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/a/a4/Bmp280.jpg/610px-Bmp280.jpg
 //DESCRIPTION       "This sensor is high-precision and low-power digital barometer, can be used to detect temperature and atmospheric pressure accurately. As atmospheric pressure changes with altitude, it can also detect approximate altitude of a place."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor_(BMP280)
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 
 #define BMP280_ADDRESS   (0x77<<1)
@@ -70,31 +72,31 @@ class GroveBaroBMP280
 {
 public:
     GroveBaroBMP280(int pinsda, int pinscl);
-    
+
     /**
      * Read a rough temperature value of the envirenment
-     * 
+     *
      * @param temperature - unit: Celsius degree
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_temperature(float *temperature);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param pressure - unit: Pa
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_pressure(int32_t *pressure);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param altitude - the absolute altitude, unit: m
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_altitude(float *altitude);
 private:
@@ -104,11 +106,11 @@ private:
     const uint8_t OSS = 0;  //0: lowpower 1: standard 2: high 3: ultrahigh accuration
     int32_t PressureCompensate;
 
-    
+
     uint16_t dig_T1;
     int16_t dig_T2;
     int16_t dig_T3;
-    
+
     uint16_t dig_P1;
     int16_t dig_P2;
     int16_t dig_P3;
@@ -118,9 +120,9 @@ private:
     int16_t dig_P7;
     int16_t dig_P8;
     int16_t dig_P9;
-    
+
     int32_t t_fine;
-    
+
     uint8_t bmp280Read8(uint8_t reg);
     uint16_t bmp280Read16(uint8_t reg);
     uint16_t bmp280Read16LE(uint8_t reg);

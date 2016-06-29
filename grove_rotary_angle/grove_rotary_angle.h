@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/4/47c18125fbb4c9db7e3104f5a3b04ef5.image.530x397.jpg
 //DESCRIPTION       "The potentiometer twig produces analog output between 0 and Vcc (5V DC with Seeeduino) on its D1 connector. The D2 connector is not used. The angular range is 300 degrees with a linear change in value. The resistance value is 10k ohms, perfect for Arduino use. This may also be known as a rotary angle sensor."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Rotary_Angle_Sensor
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 class GroveRotaryAngle
 {

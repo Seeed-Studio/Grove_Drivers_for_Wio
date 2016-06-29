@@ -38,23 +38,25 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/includes/templates/bootstrap/images/ico/grove.png
 //DESCRIPTION       "The Grove Example is test driver for develop, not public."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Example
+//ADDED_AT          "2015-09-01"
+//AUTHOR            "SEEED"
 
 class GroveExample
 {
 public:
     GroveExample(int pin);
-    
+
     bool on_power_on();
     bool on_power_off();
-    
-    
+
+
     /**
-     * This is the comment for read_temp, with the format showed here 
-     * Multipul lines are allowed. 
-     * 
+     * This is the comment for read_temp, with the format showed here
+     * Multipul lines are allowed.
+     *
      * @param temp - desc for this variable
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_temp(int *temp);
     bool read_uint8_value(uint8_t *value);
@@ -62,38 +64,38 @@ public:
     bool read_acc(float *ax, float *ay, float *az);
     bool read_compass(float *cx, float *cy, float *cz, int *degree);
     bool read_with_arg(float *cx, float *cy, float *cz, int *degree, int arg);
-    
+
     /**
      * This is the description for write_acc_mode.
-     * 
+     *
      * @param mode - desc for param mode
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_acc_mode(uint8_t mode);
     bool write_float_value(float f);
     bool write_multi_value(int a, float b, uint32_t c);
-    
+
     /**
-     * This is the description for event 'fire' 
+     * This is the description for event 'fire'
      * Multipul lines are allowed.
      */
     DEFINE_EVENT(fire, SULI_EDT_INT);
-    
+
     /**
-     * This is the description for event 'event2' 
+     * This is the description for event 'event2'
      * Multipul lines are allowed.
      */
     DEFINE_EVENT(event2, SULI_EDT_INT);
-    
+
     char *get_last_error() { return error_desc; };
 
     IO_T *io;
     TIMER_T *timer;
     TIMER_T *timer1;
     int var;
-    
-    
+
+
     void _internal_function(int x);
     void _event_poster();
 

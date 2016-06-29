@@ -38,23 +38,25 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/c/ca/Button.jpg/300px-Button.jpg
 //DESCRIPTION       "Grove Button is a momentary push button. It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Button
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 class GroveButton
 {
 public:
     GroveButton(int pin);
-    
+
     /**
      * Get the status of button
-     * 
+     *
      * @param pressed - 1: pressed, 0: not
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_pressed(uint8_t *pressed);
-    
+
     /**
-     * Event which is triggered when the button is pressed, 
+     * Event which is triggered when the button is pressed,
      * event data is the number of PIN where the button is attached.
      */
     DEFINE_EVENT(button_pressed, SULI_EDT_INT);

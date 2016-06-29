@@ -37,6 +37,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/2/28/Multi_sensor1.png
 //DESCRIPTION       "Grove – Multichannel Gas sensor is a environment detecting sensor with a built in MiCS-6814 which can detect many unhealthful gases, and three gases can be measured simultaneously due to its three channels, so it can help you to monitor the concentration which more than one gas. "
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensor
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #include "suli2.h"
 
@@ -63,18 +65,18 @@ class GroveMultiChannelGas
 {
 public:
     GroveMultiChannelGas(int pinsda, int pinscl);
-    
+
     void changeI2cAddr(uint8_t newAddr);
     void doCalibrate(void);
     void powerOn(void);
     void powerOff(void);
-    
+
     /**
      * Read the concentration of CO gas with unit ppm.
-     * 
+     *
      * @param concentration_ppm - the concentration of CO gas, unit: ppm
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_CO(float *concentration_ppm);
     bool read_NO2(float *concentration_ppm);
@@ -84,9 +86,9 @@ public:
     bool read_CH4(float *concentration_ppm);
     bool read_H2(float *concentration_ppm);
     bool read_C2H5OH(float *concentration_ppm);
-    
+
     char *get_last_error() { return error_desc; };
-    
+
 
 private:
     I2C_T *i2c;

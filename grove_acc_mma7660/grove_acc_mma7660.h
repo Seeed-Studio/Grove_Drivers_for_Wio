@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/bb/3_aix_acc.jpg
 //DESCRIPTION       "This 3-Axis Digital Accelerometer(±1.5g) is based on Freescale's low power consumption module, MMA7660FC. It features up to 10,000g high shock survivability and configurable Samples per Second rate. Test Range: ±1.5g, Sensitivity: 21LSB/g"
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±1.5g)
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #define MMA7660_ADDR  (0x4c<<1)
 

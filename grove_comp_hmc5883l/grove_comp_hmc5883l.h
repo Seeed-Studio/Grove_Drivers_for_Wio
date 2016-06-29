@@ -39,6 +39,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/b/be/Axis_compass.jpg/400px-Axis_compass.jpg
 //DESCRIPTION       "This 3-axis digital compass features a low field magnetic sensing multi-chip module HMC5883L, which provides up to 1° to 2° heading accuracy. HMC5883L consists of high-resolution HMC118X series magneto-resistive sensors, as well as Honeywell developed ASIC containing amplification, automatic degaussing strap drivers, offset cancellation and 12 bit ADC."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Compass_V1.0
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #define HMC5883L_ADDRESS (0x1E<<1)
 
@@ -59,13 +61,13 @@ class GroveCompass
 {
 public:
     GroveCompass(int pinsda, int pinscl);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param heading_deg - the angle of heading relative to the north, unit: degree
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_compass_heading(float *heading_deg);
 private:

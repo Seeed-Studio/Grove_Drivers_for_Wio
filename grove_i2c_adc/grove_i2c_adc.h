@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/5/59/I2C_ADC_01.jpg/500px-I2C_ADC_01.jpg
 //DESCRIPTION       "Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_I2C_ADC
+//ADDED_AT          "2016-05-31"
+//AUTHOR            "SEEED"
 
 #define ADDR_ADC121             (0x55<<1)
 

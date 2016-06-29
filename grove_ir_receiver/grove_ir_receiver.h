@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/ee/Grove_-_Infrared_Receiver.jpg/400px-Grove_-_Infrared_Receiver.jpg
 //DESCRIPTION       "The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the Grove - Infrared Emitter to work together."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Infrared_Receiver
+//ADDED_AT          "2016-01-01"
+//AUTHOR            "SEEED"
 
 #define __IR_RECV_DEBUG    0
 
@@ -105,40 +107,40 @@ class GroveIRRecv
 {
 public:
     GroveIRRecv(int pin);
-    
+
     /**
      * Read the last IR data received. The data will be cleared after this read.
-     * 
+     *
      * @param len - the number of bytes
      * @param data - a string in hex format, e.g. FFBBCC0011
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_last_data_recved(uint16_t *len, char **data);
-    
+
     /**
      * Read the parameters of the IR protocol(NEC).
-     * 
+     *
      * @param start_h - the length of start high signal
      * @param start_l - the length of start low signal
      * @param n_short - the length of short signal
      * @param n_long - the length of long signal
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_protocol_parameters(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long);
-    
+
     /**
      * An event which indicates the length of data IR Receiver has received.
      */
     DEFINE_EVENT(ir_recv_data_len, SULI_EDT_UINT8);
-    
+
     /**
      * An event which reports the data sequence IR Receiver has received, in HEX string.
      */
     DEFINE_EVENT(ir_recv_data_hex, SULI_EDT_STRING);
-    
-    
+
+
     IO_T *io;
     uint32_t time;
     TIMER_T *timer;
@@ -147,15 +149,15 @@ public:
     uint8_t *data;
     uint8_t *data_hex;
     bool    new_data_available;
-    
+
     void Clear() ICACHE_RAM_ATTR;
     int decode(decode_results *results) ICACHE_RAM_ATTR;
     uint8_t IsDta() ICACHE_RAM_ATTR;
     uint8_t Recv() ICACHE_RAM_ATTR;
     void check_data() ICACHE_RAM_ATTR;
-    
+
     void _format_data() ICACHE_RAM_ATTR;
-    
+
 };
 
 static void grove_ir_recv_timer_interrupt_handler(void *para) ICACHE_RAM_ATTR;

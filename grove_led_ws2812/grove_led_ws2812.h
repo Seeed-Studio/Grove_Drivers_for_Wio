@@ -47,6 +47,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/4/4f346dc15724a7b5a5c1383253aeefc9.image.530x397.jpg
 //DESCRIPTION       "The Grove WS2812 LED Strip is a full-color that external control for each lamp beads. It with high brightness, can achieve effects of full color running water, chasing and scan."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove-WS2812%20LED%20Strip
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #define MAX_LED_CNT             60
 
@@ -66,59 +68,59 @@ class GroveLedWs2812
 public:
     GroveLedWs2812(int pin);
     char *get_last_error() { return error_desc; };
-    
+
     /**
      * Set or reset or clear the led strip with a specified color.
-     * 
+     *
      * @param total_led_cnt - the total count of this strip, max: 60(too many leds will cause the power unstable)
      * @param rgb_hex_string - a rgb value in hex format, e.g. AA55CC (without # or 0x)
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_clear(uint8_t total_led_cnt, char *rgb_hex_string);
-    
+
     /**
      * Change the color of some piece of segment of the led strip.
      * We need to specify a list of rgb hex value concatinated into a string.
      * The segment will be defined with a start index and the length.
-     * The length equals rgb_hex_string's length / 6. 
-     * 
+     * The length equals rgb_hex_string's length / 6.
+     *
      * @param start - the start index of the segment(included)
      * @param rgb_hex_string - a list of rgb hex value, e.g. FFFFFFBBBBBBCCCCCC000000111111, max length: 240 or 40 rgb hex
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_segment(uint8_t start, char *rgb_hex_string);
-    
+
     /**
      * Make the strip blink in a rainbow flow
-     * 
+     *
      * @param length - the length of the flow, the flow will always begin with index 0.
      * @param brightness - 0~100
      * @param speed - 1~10, 10 is the fastest.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_start_rainbow_flow(uint8_t length, uint8_t brightness, uint8_t speed);
-    
+
     /**
      * Stop the rainbow flow.
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_stop_rainbow_flow();
 
 private:
     IO_T *io;
     TIMER_T *timer;
-    
+
     union rgb_buffer_u rgb_buffer;
     uint8_t _color_towards[MAX_LED_CNT];
     bool _extract_rgb_from_string(int start, char *str);
     char *error_desc;
     uint8_t led_cnt;
     uint8_t _rainbow_flow_brightness;
-    
+
 public:
     void update_color();
 };

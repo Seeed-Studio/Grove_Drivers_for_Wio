@@ -38,18 +38,20 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/b/bc0115270f17babe6373bce8ec1bfe8a.image.164x123.jpg
 //DESCRIPTION       "This is a simple to use PIR motion sensor with Grove compatible interface. Simply connect it to Stem shield and program it, when anyone moves in its detecting range, the sensor outputs HIGH on its SIG pin."
 //WIKI_URL          http://www.seeedstudio.com/wiki/index.php?title=Twig_-_PIR_Motion_Sensor
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 class GrovePIRMotion
 {
 public:
     GrovePIRMotion(int pin);
-    
+
     /**
-     * Detect the motion of IR object 
-     * 
+     * Detect the motion of IR object
+     *
      * @param approach - 1: IR object approached, 0: no IR object approached
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_approach(uint8_t *approach);
 

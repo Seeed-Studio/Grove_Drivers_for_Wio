@@ -37,6 +37,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/6/69/Digital_Light_Sensor.jpg
 //DESCRIPTION       "This module is based on the I2C light-to-digital converter TSL2561 to transform light intensity to a digital signal, features a selectable light spectrum range due to its dual light sensitive diodes: infrared and full spectrum."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #include "suli2.h"
 
@@ -111,16 +113,16 @@ class GroveDigitalLight
 {
 public:
     GroveDigitalLight(int pinsda, int pinscl);
-    
+
     /**
      * Reading the lucency of visable light
-     * 
+     *
      * @param lux - the strength of illumination, unit: lux
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_lux(uint32_t *lux);
-    
+
     char *get_last_error() { return error_desc; };
 
 private:
@@ -139,7 +141,7 @@ private:
 
     void _getLux(I2C_T *i2c);
     unsigned long _calculateLux(unsigned int iGain, unsigned int tInt, int iType);
-    
+
     char *error_desc;
 
 };

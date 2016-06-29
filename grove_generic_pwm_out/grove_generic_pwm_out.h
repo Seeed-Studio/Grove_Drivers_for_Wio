@@ -38,42 +38,44 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/b4/Generic_analog_output.png
 //DESCRIPTION       "The Grove Generic PWM can output a pwm signal whit specified frequency and duty. It also can be read for current state."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_PWM
+//ADDED_AT          "2015-12-01"
+//AUTHOR            "SEEED"
 
 class GenericPWMOut
 {
 public:
     GenericPWMOut(int pin);
-    
+
     /**
      * Output a PWM wave on specified IO. The default frequency is 1K Hz.
-     * 
+     *
      * @param duty_percent - 0.0~100.0, float number
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_pwm(float duty_percent);
-    
+
     /**
      * Output a PWM wave on speicfied IO with specified frequency.
-     * 
+     *
      * @param duty_percent - 0.0~100.0, float number
      * @param freq - unit: Hz
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_pwm_with_freq(float duty_percent, uint32_t freq);
-    
+
     /**
      * Read back the parameters of PWM.
-     * 
+     *
      * @param duty_percent - 0.0~100.0, float number
      * @param freq - unit: Hz
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool read_pwm(float *duty_percent, uint32_t *freq);
-    
-    
+
+
 private:
     PWM_T *io;
     uint32_t _freq;

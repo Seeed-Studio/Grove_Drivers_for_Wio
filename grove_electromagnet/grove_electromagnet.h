@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/9/9509f6e5cb898db66420ae739bb51eb3.image.164x123.jpg
 //DESCRIPTION       "Grove - Electromagnet is a type of magnet in which the magnetic field is produced by electric current and it can shuck 1KG weight and hold on."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Electromagnet
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 class GroveElecMagnet
 {

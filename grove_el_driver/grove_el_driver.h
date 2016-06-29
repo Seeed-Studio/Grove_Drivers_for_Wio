@@ -38,21 +38,23 @@
 //IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/4/45c3a0b2df09759a952ae01bf5207b42.image.530x397.jpg
 //DESCRIPTION       "Grove - EL Driver is designed for driving EL Wires.It integrates a very small inverter to drive the EL Wire, so you can easily light up the EL Wire with just one single Grove cable."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_EL_Driver
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 class GroveEL
 {
 public:
     GroveEL(int pin);
-    
+
     /**
-     * 
-     * 
+     *
+     *
      * @param onoff - 1: on, 0: off
-     * 
-     * @return bool 
+     *
+     * @return bool
      */
     bool write_onoff(int onoff);
-    
+
     /**
      * Read back the status of el wire
      *

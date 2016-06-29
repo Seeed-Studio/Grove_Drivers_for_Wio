@@ -38,6 +38,8 @@
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/ea/Toled128642.jpg/400px-Toled128642.jpg
 //DESCRIPTION       "Grove - OLED Display 1.12" is an OLED monochrome 128×64dot matrix display module with Grove 4pin I2C Interface .The characteristics of this display module are high brightness, self-emission, high contrast ratio, slim outline, wide viewing angle, wide temperature range, and low power consumption. It has bigger screen and uses all the columns from the SSD1308 chip so that it can display more contents than the OLED 96×16."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_OLED_Display_128*64
+//ADDED_AT          "2015-10-01"
+//AUTHOR            "SEEED"
 
 #define SeeedOLED_Max_X 		        127	//128 Pixels
 #define SeeedOLED_Max_Y 		        63	//64  Pixels
