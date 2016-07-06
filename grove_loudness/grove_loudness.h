@@ -27,8 +27,8 @@
  */
 
 
-#ifndef __GROVE_UV_H__
-#define __GROVE_UV_H__
+#ifndef __GROVE_LOUDNESS_H__
+#define __GROVE_LOUDNESS_H__
 
 #include "suli2.h"
 
@@ -44,7 +44,7 @@
 class GroveLoudness
 {
 public:
-	GroveLoudness(int pin);
+    GroveLoudness(int pin);
  
     /**
     * Read intensity of ultraviolet(UV) radiation.
