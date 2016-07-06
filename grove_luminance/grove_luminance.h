@@ -44,21 +44,21 @@
 class GroveLuminance
 {
 public:
-	GroveLuminance(int pin);
+    GroveLuminance(int pin);
 
-	/**
-	* Read the intensity of the ambient light.
-	*
-	* @param lux - light intensity
-	*
-	* @return bool
-	*/
-	bool read_luminance(float *lux);
+    /**
+    * Read the intensity of the ambient light.
+    *
+    * @param lux - light intensity
+    *
+    * @return bool
+    */
+    bool read_luminance(float *lux);
 
 private:
-	float _multi_map(float val, float * _in, float * _out, uint8_t size);
+    float _multi_map(float val, float * _in, float * _out, uint8_t size);
 
-	ANALOG_T *io;
+    ANALOG_T *io;
 };
 
 #endif
