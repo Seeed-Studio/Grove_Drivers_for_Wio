@@ -44,19 +44,19 @@
 class GroveSound
 {
 public:
-	GroveSound(int pin);
+    GroveSound(int pin);
 
-	/**
-	* Read the sound strength of the environment.
-	*
-	* @param sound_level - sound strength
-	*
-	* @return bool
-	*/
-	bool read_sound_level(int *sound_level);
+    /**
+    * Read the sound strength of the environment.
+    *
+    * @param sound_level - sound strength
+    *
+    * @return bool
+    */
+    bool read_sound_level(int *sound_level);
 
 private:
-	ANALOG_T *io;
+    ANALOG_T *io;
 };
 
 #endif
