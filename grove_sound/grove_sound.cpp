@@ -31,12 +31,12 @@
 
 GroveSound::GroveSound(int pin)
 {
-	this->io = (ANALOG_T *)malloc(sizeof(ANALOG_T));
-	suli_analog_init(io, pin);
+    this->io = (ANALOG_T *)malloc(sizeof(ANALOG_T));
+    suli_analog_init(io, pin);
 }
 
 bool GroveSound::read_sound_level(int *sound_level)
 {
-	*sound_level = suli_analog_read(io);
-	return true;
+    *sound_level = suli_analog_read(io);
+    return true;
 }
