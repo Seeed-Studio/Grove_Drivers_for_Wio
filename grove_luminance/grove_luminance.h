@@ -39,7 +39,7 @@
 //DESCRIPTION       "Grove - Luminance Sensor detects the intensity of the ambient light on a surface area. It uses APDS-9002 analog output ambient light photo sensor."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Luminance_Sensor
 //ADDED_AT          "2016-07-01"
-//AUTHOR            "SEEED"
+//AUTHOR            "Travis Brown"
 
 class GroveLuminance
 {
