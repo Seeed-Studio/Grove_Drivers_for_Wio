@@ -39,7 +39,7 @@
 //DESCRIPTION       "Grove - Sound Sensor can detect the sound strength of the environment. The main component of the module is a simple microphone, which is based on the LM358 amplifier and an electret microphone."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Sound_Sensor
 //ADDED_AT          "2016-07-01"
-//AUTHOR            "SEEED"
+//AUTHOR            "Travis Brown"
 
 class GroveSound
 {
