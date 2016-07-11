@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+before_install:
+install:
+script:
+    - rm -rf .git
+    - cd ..
+    - mv Grove_Drivers_for_Wio grove_drivers
+    - wget https://raw.githubusercontent.com/Seeed-Studio/Wio_Link/dev/scan_drivers.py
+    - python scan_drivers.py -k
+after_success:
+after_failure:
