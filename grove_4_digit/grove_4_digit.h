@@ -39,7 +39,7 @@
 //DESCRIPTION       "4 digit display module is usually a 12 pin module. In this Grove gadget, we utilize a TM1637 to scale down the controlling pins into 2 Grove pins. It only takes 2 digital pins of Arduino or Seeeduino to control the content, even the luminance of this display. For projects that require of alpha-numeric display, this can be a nice choice."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_4-Digit_Display
 //ADDED_AT          "2015-10-01"
-
+//AUTHOR            "SEEED"
 
 // Avoid name conflict
 #define GLB_CMDMODE 0x00  // Work on 8-bit mode
