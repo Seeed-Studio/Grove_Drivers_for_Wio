@@ -78,8 +78,12 @@ bool GroveI2cFmReceiver::read_frequency(uint16_t *frequency) {
 
 bool GroveI2cFmReceiver::write_frequency(uint16_t frequency)
 {
+     _mute_disable_bit = true;
+    _fmrecv_set_control_reg();
+
     _frequency = frequency;
     _fmrecv_set_frequency();
+
     return true;
 }
 
@@ -138,9 +142,6 @@ void GroveI2cFmReceiver::_fmrecv_set_volume_level()
 void GroveI2cFmReceiver::_fmrecv_set_frequency()
 {
     uint16_t channel = 0;
-
-    _mute_disable_bit = true;
-    _reg_data[0] |= 1 << 6;
 
     if ((_frequency >= 6500) && (_frequency < 7600))
     {
