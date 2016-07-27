@@ -35,7 +35,7 @@
 
 #include "suli2.h"
 
-//GROVE_NAME        "Grove - Sunlight"
+//GROVE_NAME        "Grove - Sunlight Sensor"
 //SKU               101020089
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/b5/Grove_sunlight_sensor_view.jpg
