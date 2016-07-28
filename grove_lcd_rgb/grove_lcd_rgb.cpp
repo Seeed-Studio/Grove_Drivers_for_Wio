@@ -151,7 +151,7 @@ size_t GroveLCDRGB::write(uint8_t C)
         return 0;
     }
 
-    if(C < 32 || C > 127) //Ignore non-printable ASCII characters. This can be modified for multilingual font.
+    if(C < 32) //Ignore non-printable control characters.
     {
         if (C=='\r')
         {
