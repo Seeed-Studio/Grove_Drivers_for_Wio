@@ -35,10 +35,10 @@
 //GROVE_NAME        "Cytron 13Amp DC Motor Driver - SMD Compatible (MD13S)"
 //SKU               MD13S
 //IF_TYPE           UART
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/b4/Generic_analog_output.png
+//IMAGE_URL         http://www.cytron.com.my/image/cache/data/products/MD13S/MD13S-800x800.jpg
 //DESCRIPTION       "Grove compatible DC motor driver which supports 6-30V, 30A peak and 13A continuous current."
-//WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_PWM
-//ADDED_AT          "2016-08-02"
+//WIKI_URL          https://docs.google.com/document/d/1icu1GVDxZhUn3ADSUc3JknNcmUMdPcsnJ4MhxOPRo-I/view
+//ADDED_AT          "2016-08-10"
 //AUTHOR            "CYTRON"
 
 class CytronMD13S
