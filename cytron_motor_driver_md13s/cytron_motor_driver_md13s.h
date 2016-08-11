@@ -35,7 +35,7 @@
 //GROVE_NAME        "Cytron 13Amp DC Motor Driver - SMD Compatible (MD13S)"
 //SKU               MD13S
 //IF_TYPE           UART
-//IMAGE_URL         http://www.cytron.com.my/image/cache/data/products/MD13S/MD13S-800x800.jpg
+//IMAGE_URL         https://c6.staticflickr.com/9/8757/28828082141_246df104a1.jpg
 //DESCRIPTION       "Grove compatible DC motor driver which supports 6-30V, 30A peak and 13A continuous current."
 //WIKI_URL          https://docs.google.com/document/d/1icu1GVDxZhUn3ADSUc3JknNcmUMdPcsnJ4MhxOPRo-I/view
 //ADDED_AT          "2016-08-10"
