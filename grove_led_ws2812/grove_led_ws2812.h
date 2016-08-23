@@ -44,7 +44,7 @@
 //GROVE_NAME        "Grove-WS2812 LED Strip 60"
 //SKU               104990089
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/4/4f346dc15724a7b5a5c1383253aeefc9.image.530x397.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-led_ws2812.jpg
 //DESCRIPTION       "The Grove WS2812 LED Strip is a full-color that external control for each lamp beads. It with high brightness, can achieve effects of full color running water, chasing and scan."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove-WS2812%20LED%20Strip
 //ADDED_AT          "2015-10-01"

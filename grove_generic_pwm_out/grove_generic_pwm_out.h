@@ -35,7 +35,7 @@
 //GROVE_NAME        "Generic PWM/Analog Output"
 //SKU               63e25800-a2d2-11e5-bf7f-feff819cdc9f
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/b4/Generic_analog_output.png
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/wio_generic_analog_output.png
 //DESCRIPTION       "The Grove Generic PWM can output a pwm signal whit specified frequency and duty. It also can be read for current state."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_PWM
 //ADDED_AT          "2015-12-01"

@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-Speaker"
 //SKU               107020001
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/depot/images/product/Grove%20Speaker_01.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/Grove-Speaker.jpg
 //DESCRIPTION       "The Grove- Speaker is a module which consists of power amplification and voice outputs. The loudness can be adjusted by the on-board potentiometer. With different input frequency, the loud-speaker generated different tones. Coding the music into arduino, DIY your own music box! "
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Speaker
 //ADDED_AT          "2015-10-01"

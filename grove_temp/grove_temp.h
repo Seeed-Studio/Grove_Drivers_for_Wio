@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Temperature Sensor"
 //SKU               101020015
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/5/5f/Grove_Temperature_Sensor_View.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-temp-sensor.jpg
 //DESCRIPTION       "The Grove - Temperature Sensor uses a Thermistor to detect the ambient temperature. The resistance of a thermistor will increase when the ambient temperature decreases. It's this characteristic that we use to calculate the ambient temperature. The detectable range of this sensor is -40 - 125ºC, and the accuracy is ±1.5ºC"
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Temperature_Sensor
 //ADDED_AT          "2015-10-01"

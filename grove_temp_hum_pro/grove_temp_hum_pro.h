@@ -36,7 +36,7 @@
 //GROVE_NAME        "Grove-Temperature&Humidity Pro"
 //SKU               101020019
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/7/75/Temp_humi_pro222.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-temperature-and-humidity-sensor-pro.jpg
 //DESCRIPTION       "Go pro in temperature and relative humidity measurement applications with this Grove gadget. This is a powerful sister version of our Grove - Temperature and Humidity Sensor. It has more complete and accurate performance than the basic version. The detecting range of this sensor is 5% RH - 99% RH, and -40°C - 80°C. And its accuracy satisfyingly reaches up to 2% RH and 0.5°C. A professional choice for applications that have relatively strict requirements. "
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor_Pro
 //ADDED_AT          "2015-10-01"

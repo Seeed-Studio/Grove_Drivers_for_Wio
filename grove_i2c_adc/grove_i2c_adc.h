@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - I2C ADC"
 //SKU               103020013
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/5/59/I2C_ADC_01.jpg/500px-I2C_ADC_01.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-i2c-adc.jpg
 //DESCRIPTION       "Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_I2C_ADC
 //ADDED_AT          "2016-05-31"

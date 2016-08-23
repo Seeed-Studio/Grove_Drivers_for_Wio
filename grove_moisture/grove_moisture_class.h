@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-Moisture"
 //SKU               101020008
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/c/ce/Moisture_sensor_.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-moisture.jpg
 //DESCRIPTION       "The Grove - Moisture Sensor can be used to detect the moisture of soil, to judge if there is dampness around the sensor. It can be used to decide if the plants in a garden needs watering. It can be used in gardens to automate watering plants. It can be used very easily by just inserting the sensor into the soil and reading the output using ADC."
 //WIKI_URL          http://seeedstudio.com/wiki/Grove_-_Moisture_Sensor
 //ADDED_AT          "2015-10-01"

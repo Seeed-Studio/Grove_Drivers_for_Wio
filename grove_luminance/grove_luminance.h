@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Luminance Sensor"
 //SKU               101020076
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/1/13/Luminance.jpg/500px-Luminance.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/Grove-Luminance-Sensor.jpg
 //DESCRIPTION       "Grove - Luminance Sensor detects the intensity of the ambient light on a surface area. It uses APDS-9002 analog output ambient light photo sensor."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Luminance_Sensor
 //ADDED_AT          "2016-07-01"

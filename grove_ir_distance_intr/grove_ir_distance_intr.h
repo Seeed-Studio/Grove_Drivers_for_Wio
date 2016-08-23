@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-IR Distance Interrupter"
 //SKU               101020040
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/e1/IR_Distance_Interrupter.jpg/300px-IR_Distance_Interrupter.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-ir_distance_interruper.jpg
 //DESCRIPTION       "Grove - IR Distance Interrupter is used to detect any object blocking the path of light. The module consists of an IR LED and a photosensor (phototransistor) pair. The light emitted by the IR LED gets reflected by any object placed in front of the sensor and this reflection is detected by the photosensor(phototransistor). Any white (or lighter) colored surface reflects more than black (or darker) colored surface."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2
 //ADDED_AT          "2015-10-01"

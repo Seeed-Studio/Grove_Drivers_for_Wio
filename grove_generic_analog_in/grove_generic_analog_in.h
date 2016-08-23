@@ -35,7 +35,7 @@
 //GROVE_NAME        "Generic Analog Input"
 //SKU               eedec01c-8c5a-11e5-8994-feff819cdc9f
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/8/87/Pion_one_generic_analog.png
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/wio_generic_analog.png
 //DESCRIPTION       "The Grove Generic Analog In can read external analog value, range on 0~1023."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_Analog_In
 //ADDED_AT          "2015-12-01"

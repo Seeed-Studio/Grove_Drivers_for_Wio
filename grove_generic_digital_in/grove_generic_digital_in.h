@@ -35,7 +35,7 @@
 //GROVE_NAME        "Generic Digital Input"
 //SKU               7e3306bc-8911-11e5-af63-feff819cdc9f
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/e/ea/Pion_one_generic_din.png
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/wio_generic_din.png
 //DESCRIPTION       "The Grove Generic Digital In check the digital input signal. It can connect to another device such as Arduino, Raspberry Pi and so on. It also push a Event when digital input change."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_Digital_In
 //ADDED_AT          "2015-12-01"

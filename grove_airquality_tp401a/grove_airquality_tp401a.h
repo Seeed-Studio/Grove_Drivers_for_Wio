@@ -36,7 +36,7 @@
 //GROVE_NAME        "Grove - Air Quality Sensor"
 //SKU               101020078
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/7/73/Air-quality-img.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-Air-quality.jpg
 //DESCRIPTION       "This sensor is designed for comprehensive monitor over indoor air condition. It's responsive to a wide scope of harmful gases, as carbon monoxide, alcohol, acetone, thinner, formaldehyde and so on. Due to the measuring mechanism, this sensor can not output specific data to describe target gases' concentrations quantitatively. But it's still competent enough to be used in applications that require only qualitative results, like auto refresher sprayers and auto air cycling systems."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Air_Quality_Sensor_v1.3
 //ADDED_AT          "2015-10-01"

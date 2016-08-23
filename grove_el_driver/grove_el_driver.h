@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-EL Driver"
 //SKU               105020005
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/4/45c3a0b2df09759a952ae01bf5207b42.image.530x397.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-el-driver.jpg
 //DESCRIPTION       "Grove - EL Driver is designed for driving EL Wires.It integrates a very small inverter to drive the EL Wire, so you can easily light up the EL Wire with just one single Grove cable."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_EL_Driver
 //ADDED_AT          "2015-10-01"

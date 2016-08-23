@@ -35,7 +35,7 @@
 //GROVE_NAME        "Generic Digital Output"
 //SKU               3a9d9a84-8c59-11e5-8994-feff819cdc9f
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/0/00/Pion_one_generic_dout.png
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/wio_generic_dout.png
 //DESCRIPTION       "The Grove Generic Digital Out can output a digital signal to IO. It can control another device such as Arduino, Raspberry Pi and so on. It also can be read for digital IO state."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_Digital_Out
 //ADDED_AT          "2015-12-01"

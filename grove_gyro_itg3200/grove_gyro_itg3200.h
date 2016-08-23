@@ -34,7 +34,7 @@
 //GROVE_NAME        "Grove-3-Axis Digital Gyro"
 //SKU               101020050
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/f/f6/Gbgr.jpg/500px-Gbgr.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-3axis-digital-gyro.jpg
 //DESCRIPTION       "Grove - 3-Axis Digital Gyro module based on ITG 3200. It is the world’s first single-chip, digital-output, 3-axis MEMS motion processing gyro optimised for gaming, 3D mice, and motion-based remote control applications for Internet connected Digital TVs and Set Top Boxes. The ITG-3200 features three 16-bit analog-to-digital converters (ADCs) for digitising the gyro outputs, a user-selectable internal low-pass filter bandwidth, and a Fast-Mode I2C (400kHz) interface."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Gyro
 //ADDED_AT          "2015-10-01"

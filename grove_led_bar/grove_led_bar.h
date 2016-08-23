@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - LED Bar"
 //SKU               104020006
 //IF_TYPE           UART
-//IMAGE_URL         http://www.seeedstudio.com/depot/images/product/104020006%201.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-led_bar.jpg
 //DESCRIPTION       "Grove – LED Bar is comprised of a 10 segment LED gauge bar and an MY9221 LED controlling chip. It can be used as an indicator for remaining battery life, voltage, water level, music volume or other values that require a gradient display. There are 10 LED bars in the LED bar graph: one red, one yellow, one light green, and seven green bars. Demo code is available to get you up and running quickly. It lights up the LEDs sequentially from red to green, so the entire bar graph is lit up in the end. Want to go further? Go ahead and code your own effect."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_LED_Bar
 //ADDED_AT          "2016-01-08"

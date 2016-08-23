@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-Barometer(BMP085)"
 //SKU               101020032
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/e7/Grove-Barometer.jpg/621px-Grove-Barometer.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-barometer-sensor-bmp085.jpg
 //DESCRIPTION       "This Sensor features a Bosch BMP085 high-accuracy chip to detect barometric pressure and temperature. It can widely measure pressure ranging from 300hPa to 1100hPa, AKA +9000m to -500m above sea level, with a super high accuracy of 0.03hPa(0.25m) in ultra-high resolution mode."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor
 //ADDED_AT          "2015-10-01"

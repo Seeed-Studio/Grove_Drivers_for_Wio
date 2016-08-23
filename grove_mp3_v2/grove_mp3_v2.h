@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - MP3 v2.0"
 //SKU               107020008
 //IF_TYPE           UART
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/e/e0d5fd4cbcface290dc089c29adbf98b.image.530x397.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-mp3_v2.jpg
 //DESCRIPTION       "Grove - MP3 v2.0 is a tiny-size and compact audio module. It supports operations including shuffle and play in an order of various audio files such as WAV and WMV ones. With serial communication, you can use all predefined commands or even the combinations of them to play the music. This module also supports general file systems like FAT16 and FAT32. It gets a Grove UART interface, a 3.5mm audio jack and a micro-SD slot. With this module, you can get some “voices” for silent applications."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_MP3_v2.0
 //ADDED_AT          "2015-10-01"

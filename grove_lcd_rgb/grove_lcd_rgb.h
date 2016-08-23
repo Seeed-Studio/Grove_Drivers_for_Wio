@@ -36,7 +36,7 @@
 //GROVE_NAME        "Grove - LCD RGB Backlight"
 //SKU               104030001
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/2/216a915503836429b7e6b92f83e035d5.image.530x397.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-lcd_rgb.jpg
 //DESCRIPTION       "Done with tedious mono color backlight? This Grove enables you to set the color to whatever you like via the simple and concise Grove interface. It takes I2C as communication method with your microcontroller. So number of pins required for data exchange and backlight control shrinks from ~10 to 2, relieving IOs for other challenging tasks. Besides, Grove - LCD RGB Backlight supports user-defined characters. Want to get a love heart or some other foreign characters? Just take advantage of this feature and design it!"
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_LCD_RGB_Backlight
 //ADDED_AT          "2016-01-08"

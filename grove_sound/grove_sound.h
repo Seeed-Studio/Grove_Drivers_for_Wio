@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Sound Sensor"
 //SKU               101020023
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/1/12/Sound_Sensor.jpg/400px-Sound_Sensor.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-sound-sensor.jpg
 //DESCRIPTION       "Grove - Sound Sensor can detect the sound strength of the environment. The main component of the module is a simple microphone, which is based on the LM358 amplifier and an electret microphone."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Sound_Sensor
 //ADDED_AT          "2016-07-01"

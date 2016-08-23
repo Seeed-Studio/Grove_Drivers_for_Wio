@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - UV Sensor"
 //SKU               101020043
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/c/c5/UV_Sensor_01.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-UV-Sensor.jpg
 //DESCRIPTION       "The Grove - UV Sensor is used for detecting the intensity of incident ultraviolet(UV) radiation. This form of electromagnetic radiation has shorter wavelengths than visible radiation."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_UV_Sensor
 //ADDED_AT          "2016-07-01"
@@ -45,7 +45,7 @@ class GroveUV
 {
 public:
     GroveUV(int pin);
- 
+
     /**
     * Read intensity of ultraviolet(UV) radiation.
     *

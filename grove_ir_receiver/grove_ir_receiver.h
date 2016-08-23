@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Infrared Receiver"
 //SKU               101020016
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/ee/Grove_-_Infrared_Receiver.jpg/400px-Grove_-_Infrared_Receiver.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/Grove-Infrared_Receiver.jpg
 //DESCRIPTION       "The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals. We often use the two Groves-the Infrared Receiver and the Grove - Infrared Emitter to work together."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Infrared_Receiver
 //ADDED_AT          "2016-01-01"

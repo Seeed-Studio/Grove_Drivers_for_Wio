@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - OLED Display 1.12''"
 //SKU               104030011
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/9/90/Oled1281281.jpg/500px-Oled1281281.jpg
+//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-oled_9696.jpg
 //DESCRIPTION       "Grove - OLED 96×96 is constructed with 96×96 dot matrix OLED module LY120 and SSD1327 driver IC which has a number of advantages such as high brightness, self-emission, high contrast ratio, slim / thin outline, wide viewing angle, wide temperature range, and low power consumption."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_OLED_Display_1.12%22
 //ADDED_AT          "2016-07-01"
