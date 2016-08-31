@@ -32,7 +32,8 @@
 GenericDOut::GenericDOut(int pin)
 {
     this->io = (IO_T *)malloc(sizeof(IO_T));
-
+    this->timer = (TIMER_T *)malloc(sizeof(TIMER_T));
+    
     suli_pin_init(io, pin, SULI_OUTPUT);
 }
 
@@ -46,4 +47,32 @@ bool GenericDOut::read_onoff_status(int *onoff)
 {
     *onoff = suli_pin_read(io);
     return true;
+}
+
+bool GenericDOut::write_high_pulse(int ms)
+{
+    suli_pin_write(io, 0);
+    suli_pin_write(io, 1);
+    suli_timer_install(timer, ms * 1000, grove_relay_timer_high_pulse_interrupt_handler, this, false);
+    return true;
+}
+
+bool GenericDOut::write_low_pulse(int ms)
+{
+    suli_pin_write(io, 1);
+    suli_pin_write(io, 0);
+    suli_timer_install(timer, ms * 1000, grove_relay_timer_low_pulse_interrupt_handler, this, false);
+    return true;
+}
+
+static void grove_relay_timer_high_pulse_interrupt_handler(void *para)
+{
+    GenericDOut *g = (GenericDOut *)para;
+    suli_pin_write(g->io, 0);
+}
+
+static void grove_relay_timer_low_pulse_interrupt_handler(void *para)
+{
+    GenericDOut *g = (GenericDOut *)para;
+    suli_pin_write(g->io, 1);
 }

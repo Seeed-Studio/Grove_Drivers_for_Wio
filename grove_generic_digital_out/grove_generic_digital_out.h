@@ -64,9 +64,29 @@ public:
      */
     bool read_onoff_status(int *onoff);
 
-private:
+    /**
+     * Output a high pulse in milliseconds
+     *
+     * @param ms - milliseconds
+     *
+     * @return bool
+     */
+    bool write_high_pulse(int ms);
+    
+    /**
+     * Output a low pulse in milliseconds
+     *
+     * @param ms - milliseconds
+     *
+     * @return bool
+     */
+    bool write_low_pulse(int ms);
+    
     IO_T *io;
+    TIMER_T *timer;
 };
 
+static void grove_relay_timer_high_pulse_interrupt_handler(void *para);
+static void grove_relay_timer_low_pulse_interrupt_handler(void *para);
 
 #endif
