@@ -264,7 +264,7 @@ GroveGesture::GroveGesture(int pinsda, int pinscl)
     new_data_available = false;
     cur_motion = last_motion = 255;
 
-    suli_timer_install(timer, 1000000, grove_guesture_timer_interrupt_handler, this, true);
+    suli_soft_timer_install(timer, 1000, grove_guesture_timer_interrupt_handler, this, true);
 }
 
 bool GroveGesture::_init(void)

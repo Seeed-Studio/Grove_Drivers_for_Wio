@@ -156,6 +156,6 @@ public:
     void check_motion() ICACHE_RAM_ATTR;
 };
 
-static void grove_guesture_timer_interrupt_handler(void *para) ICACHE_RAM_ATTR;
+static void grove_guesture_timer_interrupt_handler(void *para);
 
 #endif
