@@ -38,9 +38,9 @@ GroveLuminance::GroveLuminance(int pin)
 bool GroveLuminance::read_luminance(float *lux)
 {
     float vout_array[] = { 0.0011498, 0.0033908, 0.011498, 0.041803, 0.15199, 0.53367, 1.3689, 1.9068, 2.3 };
-    float  lux_array[] = { 1.0108,    3.1201,    9.8051,   27.43,    69.545,  232.67,  645.11, 73.52,  1000 };
+    float  lux_array[] = { 1.0108,    3.1201,    9.8051,   27.43,    69.545,  232.67,  645.11, 973.52, 1000 };
 
-    float vout = (suli_analog_read(io) * (3.0 / 1023.0));
+    float vout = suli_analog_voltage(io);
     *lux = _multi_map(vout, vout_array, lux_array, 9);
 
     return true;
