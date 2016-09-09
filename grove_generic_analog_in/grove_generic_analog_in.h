@@ -54,6 +54,15 @@ public:
      * @return bool
      */
     bool read_analog(int *analog);
+
+    /**
+     * Read the voltage of the measuring point.
+     *
+     * @param volt - unit: V
+     *
+     * @return bool
+     */
+    bool read_voltage(float *volt);
 private:
     ANALOG_T *io;
 };
