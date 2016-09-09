@@ -38,6 +38,7 @@
 //IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-encoder.jpg
 //DESCRIPTION       "This module is an incremental rotary encoder. It encodes the rotation signal from the axis and output the signal by electronic pulse. "
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Encoder
+//HACK_GUIDE_URL    https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Hardware-Hacking-Guide
 //ADDED_AT          "2015-12-01"
 //AUTHOR            "SEEED"
 
