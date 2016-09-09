@@ -29,8 +29,6 @@
 
 #include "grove_gesture_paj7620.h"
 
-#define USE_DEBUG (1)
-
 // PAJ7620U2_20140305.asc
 unsigned char init_register_array[][2] = {  // Initial Gesture
     { 0xEF, 0x00 },
@@ -260,6 +258,8 @@ GroveGesture::GroveGesture(int pinsda, int pinscl)
     suli_i2c_init(i2c, pinsda, pinscl);
     this->timer = (TIMER_T *)malloc(sizeof(TIMER_T));
 
+    this->debug_serial = suli_get_debug_serial();
+
     isWaken = false;
     new_data_available = false;
     cur_motion = last_motion = 255;
@@ -276,25 +276,25 @@ bool GroveGesture::_init(void)
     //wakeup the sensor
     if (!pajWakeUp())
     {
-        Serial1.println("err: wakeup failed!");
+        if (debug_serial) suli_uart_println(debug_serial, "err: wakeup failed!");
         return false;
     }
 
     isWaken = true;
 
-    Serial1.println("wakeuped");
+    if (debug_serial) suli_uart_println(debug_serial, "wakeuped");
 
     //check the addrs
     error = pajReadData(0, 1, &data0);
     if (error != true)
     {
-        Serial1.print("error1");
+        if (debug_serial) suli_uart_println(debug_serial, "error1");
         return false;
     }
     error = pajReadData(1, 1, &data1);
     if (error != true)
     {
-        Serial1.print("error2");
+        if (debug_serial) suli_uart_println(debug_serial, "error2");
         return false;
     }
     if ((data0 != 0x20) || (data1 != 0x76)) return false;
@@ -308,9 +308,8 @@ bool GroveGesture::_init(void)
     //reselect the bank0 to read data
     pajSelectBank(BANK0);
 
-#if USE_DEBUG
-    Serial1.println("paj7620 initialization done.");
-#endif
+    if (debug_serial) suli_uart_println(debug_serial, "paj7620 initialization done.");
+
     return true;
 }
 
@@ -431,8 +430,6 @@ void GroveGesture::check_motion()
             break;
         }
     }
-
-    //Serial1.println(last_motion);
 
     if (cur_motion != 0)
     {

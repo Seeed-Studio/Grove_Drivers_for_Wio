@@ -59,11 +59,11 @@ GroveSpeaker::GroveSpeaker(int pin)
 //duration: the time sounds, unit: ms
 //freq: the frequency of speaker, unit: Hz
 bool GroveSpeaker::write_sound_ms(int freq, int duration_ms)
-{  
+{
     if(freq == 0 || duration_ms == 0) return false;
-	
+
 	uint32_t interval = (uint32_t)1000000 / freq;//convert the unit to us
-    
+
     if (interval > 10000)
     {
         interval = 10000;
@@ -74,13 +74,7 @@ bool GroveSpeaker::write_sound_ms(int freq, int duration_ms)
 
     uint32_t times = (uint32_t)duration_ms * 1000 / interval; //calcuate how many times the loop takes
     uint32_t times_5ms = 5000 / interval;
-    
-#if ENABLE_DEBUG_ON_UART1
-	Serial1.print("interval");
-	Serial1.println(interval);
-	Serial1.print("times");
-	Serial1.println(times);
-#endif
+
     if (interval > 2000)
     {
         for (int i = 0; i < times; i++)
@@ -104,7 +98,7 @@ bool GroveSpeaker::write_sound_ms(int freq, int duration_ms)
             }
         }
     }
-	
+
     return true;
 }
 

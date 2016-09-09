@@ -93,6 +93,7 @@ public:
     IO_T *io;
     TIMER_T *timer;
     TIMER_T *timer1;
+    UART_T *debug_serial;
     int var;
 
 

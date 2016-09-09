@@ -36,23 +36,24 @@ GroveExample::GroveExample(int pin)
     this->io = (IO_T *)malloc(sizeof(IO_T));
     this->timer = (TIMER_T *)malloc(sizeof(TIMER_T));
     this->timer1 = (TIMER_T *)malloc(sizeof(TIMER_T));
+    this->debug_serial = suli_get_debug_serial();
 
     //suli_i2c_init(i2c, pinsda, pinscl);
     suli_pin_init(io, pin, SULI_INPUT);
-    
+
     suli_timer_install(timer,  1000000, timer_handler, this, true);
     suli_timer_install(timer1, 1500000, timer1_handler, this, true);
-    
+
     suli_pin_attach_interrupt_handler(io, &pin_interrupt_handler, SULI_RISE, this);
-    
+
     on_power_on();
-    
+
 }
 
 bool GroveExample::on_power_on()
 {
     var = 0;
-    
+
     return true;
 }
 
@@ -105,17 +106,18 @@ bool GroveExample::write_acc_mode(uint8_t mode)
 
 bool GroveExample::write_float_value(float f)
 {
-    String str(f);
-    Serial1.print("get float: ");
-    Serial1.println(str);
+    if (debug_serial)
+    {
+        suli_uart_print(debug_serial, "get float: ");
+        suli_uart_write_float(debug_serial, f);
+        suli_uart_println(debug_serial, "");
+    }
     return false;
 }
 
 bool GroveExample::write_multi_value(int a, float b, uint32_t c)
 {
     //_GroveExample::internal_function(i2c, b);
-    Serial1.print("get uint32: ");
-    Serial1.println(c);
     return true;
 }
 
@@ -133,12 +135,12 @@ void GroveExample::_event_poster()
 static void pin_interrupt_handler(void *para)
 {
     GroveExample *g = (GroveExample *)para;
-    
+
     g->var++;
 
     //POST_EVENT_IN_INSTANCE(g, fire, g->io);
     g->_event_poster();
-    
+
     //suli_timer_remove(g->timer);
     suli_timer_control_interval(g->timer, 2000000);
     suli_timer_control_interval(g->timer1, 2000000);
@@ -147,21 +149,28 @@ static void pin_interrupt_handler(void *para)
 static void timer_handler(void *para)
 {
     GroveExample *g = (GroveExample *)para;
-    
+
     g->var++;
-        
-    Serial1.printf("example var in timer0: %d\r\n", g->var);
+
+    if (g->debug_serial)
+    {
+        suli_uart_print(g->debug_serial, "example var in timer0: ");
+        suli_uart_write_int(g->debug_serial, g->var);
+        suli_uart_println(g->debug_serial, "");
+    }
 }
 
 static void timer1_handler(void *para)
 {
     GroveExample *g = (GroveExample *)para;
-    
-    //Serial1.printf("example var in timer1: %d\r\n", g->var);
-    
-    Serial1.print("Free heap size: ");
-    Serial1.println(ESP.getFreeHeap()); 
-    
+
+    if (g->debug_serial)
+    {
+        suli_uart_print(g->debug_serial, "Free heap size: ");
+        suli_uart_write_int(g->debug_serial, ESP.getFreeHeap());
+        suli_uart_println(g->debug_serial, "");
+    }
+
     g->_internal_function(g->var);
 }
 

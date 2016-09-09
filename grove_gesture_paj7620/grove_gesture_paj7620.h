@@ -145,6 +145,7 @@ public:
 
     I2C_T *i2c;
     TIMER_T *timer;
+    UART_T *debug_serial;
     bool isWaken;
     bool new_data_available;
     uint8_t cur_motion, last_motion;
