@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - I2C FM Receiver"
 //SKU               107020006
 //IF_TYPE           I2C
-//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/Grove-I2C_FM_Receiver.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/Grove-I2C_FM_Receiver.jpg
 //DESCRIPTION       "Grove - I2C FM Receiver is a wideband FM receiver module, this module is based on RDA5807M. The RDA5807M series is the newest generation single-chip broadcast FM stereo radio tuner with fully integrated synthesizer."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_I2C_FM_Receiver
 //ADDED_AT          "2016-07-01"

@@ -36,7 +36,7 @@
 //GROVE_NAME        "Grove - Gesture v1.0"
 //SKU               101020083
 //IF_TYPE           I2C
-//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-gesture-paj7620.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-gesture-paj7620.jpg
 //DESCRIPTION       "The sensor on Grove - Gesture is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures ,and these gestures information can be simply accessed via the I2C bus."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Gesture_v1.0
 //ADDED_AT          "2015-10-01"

@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-Electromagnet"
 //SKU               101020073
 //IF_TYPE           GPIO
-//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-electromagnet.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-electromagnet.jpg
 //DESCRIPTION       "Grove - Electromagnet is a type of magnet in which the magnetic field is produced by electric current and it can shuck 1KG weight and hold on."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Electromagnet
 //ADDED_AT          "2015-10-01"

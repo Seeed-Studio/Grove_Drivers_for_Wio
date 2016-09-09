@@ -34,7 +34,7 @@
 //GROVE_NAME        "Grove-Digital Light"
 //SKU               101020030
 //IF_TYPE           I2C
-//IMAGE_URL         https://s3-us-west-2.amazonaws.com/wio.seeed.cc/static/driver_images/grove-digital-light-sensor.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-digital-light-sensor.jpg
 //DESCRIPTION       "This module is based on the I2C light-to-digital converter TSL2561 to transform light intensity to a digital signal, features a selectable light spectrum range due to its dual light sensitive diodes: infrared and full spectrum."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor
 //ADDED_AT          "2015-10-01"
