@@ -56,6 +56,7 @@ public:
     bool read_approach(uint8_t *mag_approach);
 
     /**
+     * From "Grove-Magnetic Switch", triggered when magnet approached.
      * Event data is the number of the PIN to which the grove is attached
      */
     DEFINE_EVENT(mag_approached, SULI_EDT_UINT8);

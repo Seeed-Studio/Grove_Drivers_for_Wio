@@ -56,6 +56,7 @@ public:
     bool read_approach(uint8_t *approach);
 
     /**
+     * From "Grove-PIR Motion Sensor", triggered when IR object moved around.
      * Event data is the number of the PIN to which the grove is attached
      */
     DEFINE_EVENT(ir_moved, SULI_EDT_INT);
