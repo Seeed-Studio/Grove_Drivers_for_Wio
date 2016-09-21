@@ -56,9 +56,19 @@ public:
     bool read_input(uint8_t *input);
 
     /**
+     * From "Generic Digital Input", triggered when the state of the PIN changed.
      * Event data is the number of the PIN to which the grove is attached
      */
     DEFINE_EVENT(input_changed, SULI_EDT_INT);
+    /**
+     * From "Generic Digital Input", triggered when the level of the PIN rised.
+     */
+    DEFINE_EVENT(input_rise, SULI_EDT_INT);
+    /**
+     * From "Generic Digital Input", triggered when the level of the PIN fell.
+     */
+    DEFINE_EVENT(input_fall, SULI_EDT_INT);
+
 
     IO_T *io;
     uint32_t time;

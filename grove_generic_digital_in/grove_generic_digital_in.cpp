@@ -37,7 +37,7 @@ GenericDIn::GenericDIn(int pin)
 
     suli_pin_init(io, pin, SULI_INPUT);
     time = millis();
-    
+
     suli_pin_attach_interrupt_handler(io, &input_changed_interrupt_handler, SULI_CHANGE, this);
 }
 
@@ -58,5 +58,13 @@ static void input_changed_interrupt_handler(void *para)
     g->time = millis();
 
     POST_EVENT_IN_INSTANCE(g, input_changed, g->io);
+
+    if (suli_pin_read(g->io))
+    {
+        POST_EVENT_IN_INSTANCE(g, input_rise, g->io);
+    } else
+    {
+        POST_EVENT_IN_INSTANCE(g, input_fall, g->io);
+    }
 }
 
