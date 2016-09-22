@@ -32,11 +32,11 @@
 
 #include "suli2.h"
 
-//GROVE_NAME        "Grove-Barometer(BMP085)"
+//GROVE_NAME        "Grove-Barometer(BMP085/BMP180)"
 //SKU               101020032
 //IF_TYPE           I2C
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-barometer-sensor-bmp085.jpg
-//DESCRIPTION       "This Sensor features a Bosch BMP085 high-accuracy chip to detect barometric pressure and temperature. It can widely measure pressure ranging from 300hPa to 1100hPa, AKA +9000m to -500m above sea level, with a super high accuracy of 0.03hPa(0.25m) in ultra-high resolution mode."
+//DESCRIPTION       "This Sensor features a Bosch BMP085 high-accuracy chip to detect barometric pressure and temperature. It can widely measure pressure ranging from 300hPa to 1100hPa, AKA +9000m to -500m above sea level, with a super high accuracy of 0.03hPa(0.25m) in ultra-high resolution mode. NOTE: this driver works for BMP180 as well, although BMP180 is an EOL-ed product, existing users can use this driver."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
