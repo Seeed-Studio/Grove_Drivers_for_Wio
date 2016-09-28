@@ -56,6 +56,24 @@ public:
     bool read_input(uint8_t *input);
 
     /**
+     * Read the count of rising edges since last read.
+     *
+     * @param rises - the count of rising edges
+     *
+     * @return bool
+     */
+    bool read_edge_rise_since_last_read(uint32_t *rises);
+
+    /**
+     * Read the count of falling edges since last read.
+     *
+     * @param falls - the count of falling edges
+     *
+     * @return bool
+     */
+    bool read_edge_fall_since_last_read(uint32_t *falls);
+
+    /**
      * From "Generic Digital Input", triggered when the state of the PIN changed.
      * Event data is the number of the PIN to which the grove is attached
      */
@@ -72,6 +90,7 @@ public:
 
     IO_T *io;
     uint32_t time;
+    uint32_t cnt_rise, cnt_fall;
 };
 
 static void input_changed_interrupt_handler(void *para);

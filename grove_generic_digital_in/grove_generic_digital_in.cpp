@@ -37,6 +37,7 @@ GenericDIn::GenericDIn(int pin)
 
     suli_pin_init(io, pin, SULI_INPUT);
     time = millis();
+    cnt_rise = cnt_fall = 0;
 
     suli_pin_attach_interrupt_handler(io, &input_changed_interrupt_handler, SULI_CHANGE, this);
 }
@@ -47,6 +48,19 @@ bool GenericDIn::read_input(uint8_t *input)
     return true;
 }
 
+bool GenericDIn::read_edge_rise_since_last_read(uint32_t *rises)
+{
+    *rises = cnt_rise;
+    cnt_rise = 0;
+    return true;
+}
+
+bool GenericDIn::read_edge_fall_since_last_read(uint32_t *falls)
+{
+    *falls = cnt_fall;
+    cnt_fall = 0;
+    return true;
+}
 
 static void input_changed_interrupt_handler(void *para)
 {
@@ -61,9 +75,11 @@ static void input_changed_interrupt_handler(void *para)
 
     if (suli_pin_read(g->io))
     {
+        g->cnt_rise++;
         POST_EVENT_IN_INSTANCE(g, input_rise, g->io);
     } else
     {
+        g->cnt_fall++;
         POST_EVENT_IN_INSTANCE(g, input_fall, g->io);
     }
 }
