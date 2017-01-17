@@ -99,7 +99,7 @@ public:
      *
      * @return bool
      */
-    bool read_protocal_parametersbool(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long);
+    bool read_protocal_parameters(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long);
 
     char *get_last_error() { return error_desc; };
 

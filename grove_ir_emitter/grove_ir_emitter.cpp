@@ -36,12 +36,12 @@ GroveIREmit::GroveIREmit(int pin)
     this->data = (uint8_t *)malloc(26);
 
     _khz = 38;
-    
+
     suli_pwm_init(this->io, pin);
     suli_pwm_output(this->io, 0);
     suli_pin_write(this->io, SULI_LOW);
-    
-    
+
+
     data[D_STARTH] = 168;
     data[D_STARTL] = 81;
     data[D_SHORT] = 11;
@@ -55,17 +55,17 @@ bool GroveIREmit::write_protocol_parameters(uint8_t start_h, uint8_t start_l, ui
     data[D_SHORT] = n_short;
     data[D_LONG] = n_long;
     return true;
-    
+
 }
 
-bool GroveIREmit::read_protocal_parametersbool(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long)
+bool GroveIREmit::read_protocal_parameters(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long)
 {
     *start_h = data[D_STARTH];
     *start_l = data[D_STARTL];
     *n_short = data[D_SHORT];
     *n_long = data[D_LONG];
     return true;
-    
+
 }
 
 
@@ -93,7 +93,7 @@ bool GroveIREmit::_extract_data_from_string(char *str)
     int cnt = len / 2;
 
     cnt = min(cnt, 20);
-    
+
     data[D_DATALEN] = cnt;
 
     uint8_t hex[3];
@@ -142,9 +142,9 @@ void GroveIREmit::enableIROut(int khz)
 
     //TIMER_CONFIG_KHZ(khz);
     //TIMER_ENABLE_PWM;
-    
+
     _khz = khz;
-    
+
     suli_pwm_output(this->io, 0);
     suli_pin_write(this->io, SULI_LOW);
     suli_pwm_frequency(this->io, khz * 1000);
