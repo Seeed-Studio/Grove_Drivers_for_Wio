@@ -39,15 +39,17 @@ GroveTemp::GroveTemp(int pin)
 
 bool GroveTemp::read_temp(float *temperature)
 {
-    int a;
-    int B=3975;                  //B value of the thermistor
-    float resistance;
-    
-    a = suli_analog_read(io);
-    resistance=(float)(1023-a)*10000/a; //get the resistance of the sensor;
-    *temperature=1/(log(resistance/10000)/B+1/298.15)-273.15;//convert to temperature via datasheet ;
-    
-    
+    int B=4275;                  //B value of the thermistor NCP18WF104F03RC
+    int R0 = 100000;
+    float R;
+
+    float v = suli_analog_voltage(io);
+    if (v == 0.0f) v = 0.000001f;
+
+    R = (float)(SULI_PLATFORM_VCC / v - 1) * R0; //get the resistance of the sensor;
+
+    *temperature = 1 / (log(R / R0) / B + 1 / 298.15) - 273.15; //convert to temperature via datasheet ;
+
     return true;
 }
 

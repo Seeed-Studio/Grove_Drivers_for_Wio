@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-PIR Motion Sensor"
 //SKU               101020020
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/b/bc0115270f17babe6373bce8ec1bfe8a.image.164x123.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/Grove-PIR_Motion_Sensor.jpg
 //DESCRIPTION       "This is a simple to use PIR motion sensor with Grove compatible interface. Simply connect it to Stem shield and program it, when anyone moves in its detecting range, the sensor outputs HIGH on its SIG pin."
 //WIKI_URL          http://www.seeedstudio.com/wiki/index.php?title=Twig_-_PIR_Motion_Sensor
 //ADDED_AT          "2015-10-01"
@@ -56,6 +56,7 @@ public:
     bool read_approach(uint8_t *approach);
 
     /**
+     * From "Grove-PIR Motion Sensor", triggered when IR object moved around.
      * Event data is the number of the PIN to which the grove is attached
      */
     DEFINE_EVENT(ir_moved, SULI_EDT_INT);

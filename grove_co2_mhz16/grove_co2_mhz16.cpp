@@ -33,8 +33,8 @@
 GroveCo2MhZ16::GroveCo2MhZ16(int pintx, int pinrx)
 {
     this->uart = (UART_T *)malloc(sizeof(UART_T));
-    
-    /* MH-Z16 talks 9600 baud */    
+
+    /* MH-Z16 talks 9600 baud */
     suli_uart_init(uart, pintx, pinrx, 9600);
     last_error="no error";
 }
@@ -57,7 +57,7 @@ bool GroveCo2MhZ16::_update_from_sensor(void)
    _drain_uart(); // just to be sure there's no leftovers
    suli_uart_write_bytes(uart, cmd_get_sensor, sizeof(cmd_get_sensor));
 
-   delay(10);
+   suli_delay_ms(10);
 
 #define BYTES_IN_ANSWER 9
    byte data[BYTES_IN_ANSWER];
@@ -72,7 +72,7 @@ bool GroveCo2MhZ16::_update_from_sensor(void)
 
    // checksum :
    if ((1 + (0xFF ^ (byte)(data[1] + data[2] + data[3]
-                           + data[4] + data[5] + data[6] 
+                           + data[4] + data[5] + data[6]
                            + data[7]))) != data[8])
    {
       last_error="checksum error";
@@ -81,7 +81,7 @@ bool GroveCo2MhZ16::_update_from_sensor(void)
 
    CO2PPM = (int)data[2] * 256 + (int)data[3];
    temp = (int)data[4] - 40;
- 
+
    return true;
 }
 

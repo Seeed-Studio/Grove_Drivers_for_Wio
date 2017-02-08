@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Loudness Sensor"
 //SKU               101020063
 //IF_TYPE           ANALOG
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/eb/LoudnessSensor.jpg/400px-LoudnessSensor.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-loudness-sensor.jpg
 //DESCRIPTION       "The Grove - Loudness Sensor is designed to detect the loudness of environmental sound. Based on amplifier LM2904 and a built-in microphone, it amplifies and filters the high frequency signal that received from the microphone, and outputs a positive envelop."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Loudness_Sensor
 //ADDED_AT          "2016-07-01"
@@ -45,7 +45,7 @@ class GroveLoudness
 {
 public:
     GroveLoudness(int pin);
- 
+
     /**
     * Read intensity of ultraviolet(UV) radiation.
     *

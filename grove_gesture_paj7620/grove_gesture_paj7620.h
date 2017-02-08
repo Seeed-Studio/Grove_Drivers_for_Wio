@@ -36,7 +36,7 @@
 //GROVE_NAME        "Grove - Gesture v1.0"
 //SKU               101020083
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/depot/images/product/101020083%201_01.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-gesture-paj7620.jpg
 //DESCRIPTION       "The sensor on Grove - Gesture is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures ,and these gestures information can be simply accessed via the I2C bus."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Gesture_v1.0
 //ADDED_AT          "2015-10-01"
@@ -145,6 +145,7 @@ public:
 
     I2C_T *i2c;
     TIMER_T *timer;
+    UART_T *debug_serial;
     bool isWaken;
     bool new_data_available;
     uint8_t cur_motion, last_motion;
@@ -156,6 +157,6 @@ public:
     void check_motion() ICACHE_RAM_ATTR;
 };
 
-static void grove_guesture_timer_interrupt_handler(void *para) ICACHE_RAM_ATTR;
+static void grove_guesture_timer_interrupt_handler(void *para);
 
 #endif

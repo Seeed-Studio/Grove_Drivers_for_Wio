@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Infrared Emitter"
 //SKU               101020026
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/6/6a/Grove_-_Infrared_Emitter.jpg/400px-Grove_-_Infrared_Emitter.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/Grove-Infrared_Emitter.jpg
 //DESCRIPTION       "The Infrared Emitter is used to transmit infrared signals through an infrared LED, while there is an Infrared receiver to get the signals on the other side. An infrared LED is like any other LED, with its color centered around 940nm. We can not only use the emitter to transmit data or commands, but also to emulate remotes to control your home appliance using an Arduino. The Infrared Emitter can transmit signals reliable up to 10 meters. Beyond 10 meters, the receiver may not get the signals."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Infrared_Emitter
 //ADDED_AT          "2016-01-01"
@@ -99,7 +99,7 @@ public:
      *
      * @return bool
      */
-    bool read_protocal_parametersbool(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long);
+    bool read_protocal_parameters(uint8_t *start_h, uint8_t *start_l, uint8_t *n_short, uint8_t *n_long);
 
     char *get_last_error() { return error_desc; };
 

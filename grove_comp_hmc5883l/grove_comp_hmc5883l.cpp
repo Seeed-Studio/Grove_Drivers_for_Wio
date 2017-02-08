@@ -33,13 +33,13 @@ GroveCompass::GroveCompass(int pinsda, int pinscl)
 {
     this->i2c = (I2C_T *)malloc(sizeof(I2C_T));
     suli_i2c_init(i2c, pinsda, pinscl);
-    
-    delay(5);
+
+    suli_delay_ms(5);
 
     //uint8_t config;
 	//config = (0x01 << 5);
     //suli_i2c_write_reg(i2c, HMC5883L_ADDRESS, CONFIGURATION_REGISTERB, &config, 1);
-    
+
     mode = MEASUREMENT_CONTINUOUS;
     suli_i2c_write_reg(i2c, HMC5883L_ADDRESS, MODE_REGISTER, &mode, 1);
 
@@ -56,17 +56,17 @@ bool GroveCompass::read_compass_heading(float *heading_deg)
 	x = (databuf[0] << 8) | databuf[1];
 	z = (databuf[2] << 8) | databuf[3];
 	y = (databuf[4] << 8) | databuf[5];
-    
+
     //Serial1.println(x);
     //Serial1.println(y);
     //Serial1.println(z);
-    
+
 	cx = static_cast<float>(x);
 	cy = static_cast<float>(y);
 	cz = static_cast<float>(z);
-		
+
 	float head = atan2f(cy, cx) - 0.0457;
-	
+
 	// Correct for when signs are reversed.
 	if(head < 0)
 	head += 2*PI;
@@ -77,10 +77,10 @@ bool GroveCompass::read_compass_heading(float *heading_deg)
 
 	// Convert radians to degrees for readability.
 	*heading_deg = head * 180 / PI;
-	
+
     cmdbuf[0] = DATA_REGISTER_BEGIN;
 	suli_i2c_write(i2c, HMC5883L_ADDRESS, cmdbuf, 1);
-    
+
 	return true;
 }
 

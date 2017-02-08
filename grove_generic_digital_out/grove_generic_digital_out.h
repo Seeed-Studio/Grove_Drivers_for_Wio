@@ -35,7 +35,7 @@
 //GROVE_NAME        "Generic Digital Output"
 //SKU               3a9d9a84-8c59-11e5-8994-feff819cdc9f
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/0/00/Pion_one_generic_dout.png
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/wio_generic_dout.png
 //DESCRIPTION       "The Grove Generic Digital Out can output a digital signal to IO. It can control another device such as Arduino, Raspberry Pi and so on. It also can be read for digital IO state."
 //WIKI_URL          https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Grove_Generic_Digital_Out
 //ADDED_AT          "2015-12-01"
@@ -64,9 +64,29 @@ public:
      */
     bool read_onoff_status(int *onoff);
 
-private:
+    /**
+     * Output a high pulse in milliseconds
+     *
+     * @param ms - milliseconds
+     *
+     * @return bool
+     */
+    bool write_high_pulse(int ms);
+
+    /**
+     * Output a low pulse in milliseconds
+     *
+     * @param ms - milliseconds
+     *
+     * @return bool
+     */
+    bool write_low_pulse(int ms);
+
     IO_T *io;
+    TIMER_T *timer;
 };
 
+static void grove_relay_timer_high_pulse_interrupt_handler(void *para);
+static void grove_relay_timer_low_pulse_interrupt_handler(void *para);
 
 #endif

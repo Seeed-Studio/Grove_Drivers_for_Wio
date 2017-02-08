@@ -39,7 +39,7 @@ bool GroveUV::read_uv_index(float *uv_index)
 {
     int sensorValue = suli_analog_read(io);
 
-    *uv_index = max((((sensorValue * 1000 / 4.3) - 83) / 21), 0);
+    *uv_index = max((((sensorValue * 1000 / 4.3) - 83) / 21), 0)/100;
 
     return true;
 }

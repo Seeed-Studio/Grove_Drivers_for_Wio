@@ -31,7 +31,7 @@
 #include "grove_lcd_rgb.h"
 #include "base64.h"
 
-const unsigned char color_define[4][3] = 
+const unsigned char color_define[4][3] =
 {
     {255, 255, 255},            // white
     {255, 0, 0},                // red
@@ -44,14 +44,14 @@ GroveLCDRGB::GroveLCDRGB(int pinsda, int pinscl)
 {
     this->i2c = (I2C_T *)malloc(sizeof(I2C_T));
     this->timer = (TIMER_T *)malloc(sizeof(TIMER_T));
-    
+
     suli_i2c_init(this->i2c, pinsda, pinscl);
     last_row = 0;
     _displayfunction = 0;
     _displaycontrol = 0;
     _displaymode = 0;
     _scroll_dir = LCD_MOVERIGHT;
-    
+
     _init(16, 2);
 }
 
@@ -101,8 +101,8 @@ void GroveLCDRGB::_init(uint8_t cols, uint8_t lines, uint8_t charsize)
     _displaymode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
     // set the entry mode
     _command(LCD_ENTRYMODESET | _displaymode);
-    
-    
+
+
     // backlight init
     _bl_set_reg(REG_MODE1, 0);
     // set LEDs controllable by both PWM and GRPPWM registers
@@ -110,7 +110,7 @@ void GroveLCDRGB::_init(uint8_t cols, uint8_t lines, uint8_t charsize)
     // set MODE2 values
     // 0010 0000 -> 0x20  (DMBLNK to 1, ie blinky mode)
     _bl_set_reg(REG_MODE2, 0x20);
-    
+
     write_backlight_color(0);
 }
 
@@ -151,7 +151,7 @@ size_t GroveLCDRGB::write(uint8_t C)
         return 0;
     }
 
-    if(C < 32 || C > 127) //Ignore non-printable ASCII characters. This can be modified for multilingual font.
+    if(C < 32) //Ignore non-printable ASCII characters.
     {
         if (C=='\r')
         {
@@ -167,15 +167,15 @@ size_t GroveLCDRGB::write(uint8_t C)
         }
     }
     _write_char(C);
-    
+
     return 1;
 }
 
 ///
-/// 
+///
 bool GroveLCDRGB::write_clear()
 {
-    _command(LCD_CLEARDISPLAY); 
+    _command(LCD_CLEARDISPLAY);
     suli_delay_ms(2);
     return true;
 }
@@ -218,10 +218,10 @@ bool GroveLCDRGB::write_string(uint8_t row, uint8_t col, char *str)
 
 bool GroveLCDRGB::write_base64_string(uint8_t row, uint8_t col, char *b64_str)
 {
-    
+
     int len = strlen(b64_str);
     uint8_t *buf = (uint8_t *)malloc(len);
-    
+
     if (!buf)
     {
         error_desc = "run out of memory";
@@ -233,10 +233,10 @@ bool GroveLCDRGB::write_base64_string(uint8_t row, uint8_t col, char *b64_str)
         return false;
     }
     buf[len] = '\0';
-        
+
     //len = strlen(buf);
     int i = 0;
-    
+
     while (buf[i])
     {
         if (buf[i] == '\\')
@@ -266,11 +266,11 @@ bool GroveLCDRGB::write_scroll_left(uint8_t speed)
 {
     _displaymode |= LCD_ENTRYSHIFTINCREMENT;
     _command(LCD_ENTRYMODESET | _displaymode);
-    
+
     _scroll_dir = LCD_MOVELEFT;
-    
+
     uint32_t t = suli_map(speed, 1, 10, 1000000, 50000);
-    
+
     suli_timer_install(timer, t, grove_lcd_rgb_timer_interrupt_handler, this, true);
 
     return true;
@@ -280,13 +280,13 @@ bool GroveLCDRGB::write_scroll_right(uint8_t speed)
 {
     _displaymode |= LCD_ENTRYSHIFTINCREMENT;
     _command(LCD_ENTRYMODESET | _displaymode);
-    
+
     _scroll_dir = LCD_MOVERIGHT;
-    
+
     uint32_t t = suli_map(speed, 1, 10, 1000000, 50000);
-    
+
     suli_timer_install(timer, t, grove_lcd_rgb_timer_interrupt_handler, this, true);
-    
+
     return true;
 }
 
@@ -294,9 +294,9 @@ bool GroveLCDRGB::write_stop_scroll()
 {
     _displaymode &= ~LCD_ENTRYSHIFTINCREMENT;
     _command(LCD_ENTRYMODESET | _displaymode);
-    
+
     suli_timer_remove(timer);
-    
+
     return true;
 }
 

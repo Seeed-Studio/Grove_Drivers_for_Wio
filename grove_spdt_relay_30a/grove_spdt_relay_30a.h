@@ -35,9 +35,10 @@
 //GROVE_NAME        "Grove - SPDT Relay(30A)"
 //SKU               103020012
 //IF_TYPE           GPIO
-//IMAGE_URL         http://www.seeedstudio.com/depot/images/product/SPDT%20Relay.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-spdt_relay_30a.jpg
 //DESCRIPTION       "The SPDT Relay(30A) is a high quality Single Pole Double Throw Relay(SPDT).The Relay consists of a coil, 1 common terminal, 1 normally closed terminal, and one normally open terminal. When the coil of the relay is at rest (not energized), the common terminal and the normally closed terminal have continuity. When the coil is energized, the common terminal and the normally open terminal have continuity. This relay's coil is rated up to 5V and the contact is rated up to 30A (@250VAC, 30VDC).You can use it to control high current devices."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_SPDT_Relay(30A)
+//HACK_GUIDE_URL    https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Hardware-Hacking-Guide
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

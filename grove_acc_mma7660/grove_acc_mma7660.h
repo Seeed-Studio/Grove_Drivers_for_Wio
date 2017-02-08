@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove-3Axis Digital Acc(±1.5g)"
 //SKU               101020039
 //IF_TYPE           I2C
-//IMAGE_URL         http://www.seeedstudio.com/wiki/images/b/bb/3_aix_acc.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/Grove-3-Axis-Digital-Accelerometer-MMA7660.jpg
 //DESCRIPTION       "This 3-Axis Digital Accelerometer(±1.5g) is based on Freescale's low power consumption module, MMA7660FC. It features up to 10,000g high shock survivability and configurable Samples per Second rate. Test Range: ±1.5g, Sensitivity: 21LSB/g"
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(±1.5g)
 //ADDED_AT          "2015-10-01"

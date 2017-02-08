@@ -35,9 +35,10 @@
 //GROVE_NAME        "Grove - Encoder"
 //SKU               111020001
 //IF_TYPE           UART
-//IMAGE_URL         http://www.seeedstudio.com/depot/bmz_cache/0/00a3a97e35f0ede1275ea4a989e4953c.image.530x397.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-encoder.jpg
 //DESCRIPTION       "This module is an incremental rotary encoder. It encodes the rotation signal from the axis and output the signal by electronic pulse. "
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Encoder
+//HACK_GUIDE_URL    https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Hardware-Hacking-Guide
 //ADDED_AT          "2015-12-01"
 //AUTHOR            "SEEED"
 

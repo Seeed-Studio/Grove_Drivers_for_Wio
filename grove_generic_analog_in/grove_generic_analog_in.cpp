@@ -38,7 +38,12 @@ GenericAIn::GenericAIn(int pin)
 
 bool GenericAIn::read_analog(int *analog)
 {
-     *analog = suli_analog_read(io);
+    *analog = suli_analog_read(io);
     return true;
 }
 
+bool GenericAIn::read_voltage(float *volt)
+{
+    *volt = suli_analog_voltage(io);
+    return true;
+}
