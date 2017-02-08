@@ -36,7 +36,7 @@
 //SKU               104030008
 //IF_TYPE           I2C
 //IMAGE_URL         http://www.seeedstudio.com/wiki/images/thumb/e/ea/Toled128642.jpg/400px-Toled128642.jpg
-//DESCRIPTION       "Grove - OLED Display 1.12" is an OLED monochrome 128×64dot matrix display module with Grove 4pin I2C Interface .The characteristics of this display module are high brightness, self-emission, high contrast ratio, slim outline, wide viewing angle, wide temperature range, and low power consumption. It has bigger screen and uses all the columns from the SSD1308 chip so that it can display more contents than the OLED 96×16."
+//DESCRIPTION       "Grove - OLED Display 0.96'' is an OLED monochrome 128×64dot matrix display module with Grove 4pin I2C Interface. The characteristics of this display module are high brightness, self-emission, high contrast ratio, slim outline, wide viewing angle, wide temperature range, and low power consumption. It has a bigger screen and uses all the columns from the SSD1308 chip so that it can display more contents than the OLED 96×96."
 //WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_OLED_Display_128*64
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
@@ -179,6 +179,15 @@ public:
      * @return bool
      */
     bool write_inverse_display(uint8_t inverse_or_not);
+
+    /**
+    * Set the screen to display in inverse mode.
+    *
+    * @param rotate_or_not - 1: inverse(white background), 0: normal(black background)
+    *
+    * @return bool
+    */
+    bool write_inverse_display(uint8_t rotate_or_not);
 
     char *get_last_error() { return error_desc; };
 
