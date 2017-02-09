@@ -187,7 +187,7 @@ public:
     *
     * @return bool
     */
-    bool write_inverse_display(uint8_t rotate_or_not);
+    bool write_rotate_display(uint8_t rotate_or_not);
 
     char *get_last_error() { return error_desc; };
 
