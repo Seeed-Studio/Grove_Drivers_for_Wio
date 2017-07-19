@@ -93,6 +93,9 @@ bool GroveUART::write_base64_string(char *b64_str)
     buf[len] = '\0';
 
     write_string(buf);
+
+    free(buf);
+
     return true;
 }
 

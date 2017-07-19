@@ -50,14 +50,29 @@ public:
     /**
      * Change the baudrate of UART.
      *
-     * @param index - 0:9600, 1:19200, 2:38400, 3:57600, 4:115200
+     * @param index - 0:9600(default), 1:19200, 2:38400, 3:57600, 4:115200
      *
      * @return bool
      */
     bool write_baudrate(uint8_t index);
 
+    /**
+     * Send a string to the UART port. URL special chars must be escaped.
+     *
+     * @param str - the string, must not have URL special chars.
+     *
+     * @return bool
+     */
     bool write_string(char *str);
 
+    /**
+     * Send base64 encoded string, with this method you can send chars like carriage return or
+     * URL special chars.
+     *
+     * @param b64_str - the base64 encoded string
+     *
+     * @return bool
+     */
     bool write_base64_string(char *b64_str);
 
     /**
