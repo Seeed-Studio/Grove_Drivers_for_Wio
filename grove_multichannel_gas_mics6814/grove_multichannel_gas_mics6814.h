@@ -58,6 +58,34 @@
 #define POWER_ON            0x21
 #define POWER_OFF           0x20
 
+//version 2
+#define ADDR_IS_SET             0           // if this is the first time to run, if 1126, set
+#define ADDR_FACTORY_ADC_NH3    2
+#define ADDR_FACTORY_ADC_CO     4
+#define ADDR_FACTORY_ADC_NO2    6
+#define ADDR_USER_ADC_HN3       8
+#define ADDR_USER_ADC_CO        10
+#define ADDR_USER_ADC_NO2       12
+#define ADDR_IF_CALI            14          // IF USER HAD CALI
+#define ADDR_I2C_ADDRESS        20
+
+#define CH_VALUE_NH3            1
+#define CH_VALUE_CO             2
+#define CH_VALUE_NO2            3
+
+#define CMD_ADC_RES0            1           // NH3
+#define CMD_ADC_RES1            2           // CO
+#define CMD_ADC_RES2            3           // NO2
+#define CMD_ADC_RESALL          4           // ALL CHANNEL
+#define CMD_CHANGE_I2C          5           // CHANGE I2C
+#define CMD_READ_EEPROM         6           // READ EEPROM VALUE, RETURN UNSIGNED INT
+#define CMD_SET_R0_ADC          7           // SET R0 ADC VALUE
+#define CMD_GET_R0_ADC          8           // GET R0 ADC VALUE
+#define CMD_GET_R0_ADC_FACTORY  9           // GET FACTORY R0 ADC VALUE
+#define CMD_CONTROL_LED         10
+#define CMD_CONTROL_PWR         11
+
+
 enum{CO, NO2, NH3, C3H8, C4H10, CH4, H2, C2H5OH};
 
 
@@ -66,8 +94,6 @@ class GroveMultiChannelGas
 public:
     GroveMultiChannelGas(int pinsda, int pinscl);
 
-    void changeI2cAddr(uint8_t newAddr);
-    void doCalibrate(void);
     void powerOn(void);
     void powerOff(void);
 
@@ -92,18 +118,31 @@ public:
 
 private:
     I2C_T *i2c;
+    TIMER_T *timer;
+    int __version;
     uint16_t res0[3];//sensors res0
     uint16_t res[3];//sensors res
     uint8_t i2cAddress;//I2C address of the sensor
     uint8_t is_connected;
+
+    //v1 read/write
     void sendCmd(uint8_t dta);
     int16_t readData(uint8_t cmd);
     int16_t readR0();
-    int16_t readR();
+    void readR();
+
+    //v2 read/write
+    void sendCmdWithValue(uint8_t cmd, uint8_t value);
+    uint16_t readEEP(uint8_t eep_addr);
+    uint8_t getFWVersion();
+
     float calcGas(int gas);
     char *error_desc;
 
 };
+
+static void grove_multichal_gas_timer_interrupt_handler(void *para);
+
 
 
 #endif
