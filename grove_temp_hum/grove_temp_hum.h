@@ -38,7 +38,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-Temp%26Humi.jpg
 //DESCRIPTION       "This is a multifunctional sensor that gives you temperature and relative humidity information at the same time. It utilizes a DHT11 sensor that can meet measurement needs of general purposes. It provides reliable readings when environment humidity condition in between 20% RH and 90% RH, and temperature condition in between 0°C and 50°C, covering needs in most home and daily applications that don't contain extreme conditions."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Temperature_and_Humidity_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

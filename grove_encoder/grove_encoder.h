@@ -1,4 +1,4 @@
-/*
+﻿/*
  * grove_encoder.h
  *
  * Copyright (c) 2012 seeed technology inc.
@@ -37,7 +37,7 @@
 //IF_TYPE           UART
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-encoder.jpg
 //DESCRIPTION       "This module is an incremental rotary encoder. It encodes the rotation signal from the axis and output the signal by electronic pulse. "
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Encoder
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Encoder/
 //HACK_GUIDE_URL    https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Hardware-Hacking-Guide
 //ADDED_AT          "2015-12-01"
 //AUTHOR            "SEEED"

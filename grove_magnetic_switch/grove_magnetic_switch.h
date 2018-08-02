@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-magnetic-switch.jpg
 //DESCRIPTION       "This is a Grove interface compatible Magnetic switch module. It is based on encapsulated dry reed switch CT10. CT10 is single-pole, single throw (SPST) type, having normally open ruthenium contacts. The sensor is a double-ended type and may be actuated with an electromagnet, a permanent magnet or a combination of both. The magnetic switch is a wonderful tool for designers who would like to turn a circuit on and off based on proximity."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Magnetic_Switch
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Magnetic_Switch/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

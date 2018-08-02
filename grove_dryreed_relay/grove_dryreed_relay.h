@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-dryreed-relay.jpg
 //DESCRIPTION       "The module is a relay module which works through magnetizing the vibration reed via the current in the coils. Compared to electromagnetic relays, the contacts completely sealed is the biggest feature of the Dry-Reed Relay. Besides, it features simplicity in construct, compactness, fast speed and long life, which make it widely applied in many fields such as microelectronic detection, Automatic Control etc."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Dry-Reed_Relay
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Dry-Reed_Relay/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

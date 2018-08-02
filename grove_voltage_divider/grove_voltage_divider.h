@@ -37,7 +37,7 @@
 //IF_TYPE           ANALOG
 //IMAGE_URL         https://statics3.seeedstudio.com/product/Voltage%20Divider_01.jpg
 //DESCRIPTION       "The Grove – Voltage Divider provides an interface for measuring extern voltage, eliminating the need to connect a resistance to input interface. Besides, The voltage gain can select by dial switch."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Voltage_Divider
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Voltage_Divider/
 //ADDED_AT          "2016-09-22"
 //AUTHOR            "SEEED"
 

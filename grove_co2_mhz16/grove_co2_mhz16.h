@@ -37,7 +37,7 @@
 //IF_TYPE           UART
 //IMAGE_URL         http://statics3.seeedstudio.com/images/product/Grove%20CO2%20Sensor.jpg
 //DESCRIPTION       "The Grove - CO2 Sensor module is infrared CO2 sensor with high sensitivity and high resolution."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_CO2_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-CO2_Sensor/
 //ADDED_AT          "2016-06-13"
 //AUTHOR            "Mirar"
 

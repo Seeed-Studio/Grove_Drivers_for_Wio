@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://statics3.seeedstudio.com/images/product/hall%20sensor.jpg
 //DESCRIPTION       "The Hall Sensor measures the Hall Effect, which is a production of a voltage difference across an electrical conductor, transverse to an electric current in the conductor as well as a magnetic field perpendicular to the current."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Hall_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Hall_Sensor/
 //ADDED_AT          "2016-09-21"
 //AUTHOR            "SEEED"
 

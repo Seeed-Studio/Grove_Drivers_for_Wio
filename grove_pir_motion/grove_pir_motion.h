@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/Grove-PIR_Motion_Sensor.jpg
 //DESCRIPTION       "This is a simple to use PIR motion sensor with Grove compatible interface. Simply connect it to Stem shield and program it, when anyone moves in its detecting range, the sensor outputs HIGH on its SIG pin."
-//WIKI_URL          http://www.seeedstudio.com/wiki/index.php?title=Twig_-_PIR_Motion_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-PIR_Motion_Sensor/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

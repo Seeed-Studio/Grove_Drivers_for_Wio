@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         http://statics3.seeedstudio.com/product/Dustsensor_01.jpg
 //DESCRIPTION       "This Dust Sensor gives a good indication of the air quality in an environment by measuring the dust concentration. The Particulate Matter level (PM level) in the air is measured by counting the Low Pulse Occupancy time (LPO time) in given time unit. LPO time is proportional to PM concentration. This sensor can provide reliable data for air purifier systems; it is responsive to PM of diameter 1μm."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Dust_sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Dust_Sensor/
 //HACK_GUIDE_URL    https://github.com/Seeed-Studio/Grove_Drivers_for_Wio/wiki/Hardware-Hacking-Guide
 //ADDED_AT          "2016-08-11"
 //AUTHOR            "t.renou@me.com"

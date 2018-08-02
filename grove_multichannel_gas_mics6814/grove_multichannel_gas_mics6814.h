@@ -36,7 +36,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         http://statics3.seeedstudio.com/images/product/101020088%201.jpg
 //DESCRIPTION       "Grove – Multichannel Gas sensor is a environment detecting sensor with a built in MiCS-6814 which can detect many unhealthful gases, and three gases can be measured simultaneously due to its three channels, so it can help you to monitor the concentration which more than one gas. "
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Multichannel_Gas_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Multichannel_Gas_Sensor/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

@@ -37,7 +37,7 @@
 //IF_TYPE           UART
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-4-digit-display.jpg
 //DESCRIPTION       "4 digit display module is usually a 12 pin module. In this Grove gadget, we utilize a TM1637 to scale down the controlling pins into 2 Grove pins. It only takes 2 digital pins of Arduino or Seeeduino to control the content, even the luminance of this display. For projects that require of alpha-numeric display, this can be a nice choice."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_4-Digit_Display
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-4-Digit_Display/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

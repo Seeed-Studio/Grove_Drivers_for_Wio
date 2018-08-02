@@ -37,7 +37,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-i2c_motor_driver.jpg
 //DESCRIPTION       "The Grove I2C motor driver is a new addition to the Grove series with the same easy-to-use interface. Its heart is a dual channel H-bridge driver chip（L298N）that can handle current up to 2A per channel, controlled by an Atmel ATmega8L which handles the I2C communication with for example an Arduino. Both motors can be driven simultaneously while set to a different speed and direction. It can power two brushed DC motors or one 4-wire two-phase stepper motor. It requires a 6V to 15V power supply to power the motor and has an onboard 5V voltage regulator which can power the I2C bus and the Arduino(selectable by jumper). All driver lines are diode protected from back EMF."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver_V1.2
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-I2C_Motor_Driver_V1.2/
 //ADDED_AT          "2016-01-01"
 //AUTHOR            "SEEED"
 

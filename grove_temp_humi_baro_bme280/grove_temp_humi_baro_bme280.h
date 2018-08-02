@@ -37,7 +37,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         http://statics3.seeedstudio.com/seeed/img/2016-06/R425Ianm2Rr93qmJQFUEwGx7.jpg
 //DESCRIPTION       "The module provides precise measurement of not only barometric pressure and temperature, but also the humidity in the environment."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Barometer_Sensor(BME280)
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/
 //ADDED_AT          "2016-06-17"
 //AUTHOR            "SEEED"
 

@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/Grove-Recorder.jpg
 //DESCRIPTION       "Grove - Recorder is based on ISD1820P, which can record 8~20 sec by set resistor and cycle play. It can offers true single-chip voice recording, no-volatile storage. Grove - Recorder is 100K and the total 10s for Recorder. This module is very easy to control, which can direct control by push button on board or by microcontroller. "
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Recorder
+//WIKI_URL          http://wiki.seeedstudio.com/Grove_Recorder/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

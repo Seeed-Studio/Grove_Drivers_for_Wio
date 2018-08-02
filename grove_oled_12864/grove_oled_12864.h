@@ -37,7 +37,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-oled_12864.jpg
 //DESCRIPTION       "Grove - OLED Display 0.96'' is an OLED monochrome 128×64dot matrix display module with Grove 4pin I2C Interface. The characteristics of this display module are high brightness, self-emission, high contrast ratio, slim outline, wide viewing angle, wide temperature range, and low power consumption. It has a bigger screen and uses all the columns from the SSD1308 chip so that it can display more contents than the OLED 96×96."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_OLED_Display_128*64
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

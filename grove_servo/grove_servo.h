@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-servo.jpg
 //DESCRIPTION       "Grove - Servo is DC motor with gearing and feedback system. It is used in driving mechanism of robots. The module is a bonus product for Grove lovers. We regulated the three-wire servo into a Grove standard connector. You can plug and play it as a typical Grove module now, without jumper wires clutter. But if you feel more like a proto servo, check out EMAX 9g ES08A High Sensitive Mini Servo. They are the same model, both of good quality and burden-free price."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Servo
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Servo/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

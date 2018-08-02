@@ -37,7 +37,7 @@
 //IF_TYPE           ANALOG
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-UV-Sensor.jpg
 //DESCRIPTION       "The Grove - UV Sensor is used for detecting the intensity of incident ultraviolet(UV) radiation. This form of electromagnetic radiation has shorter wavelengths than visible radiation."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_UV_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-UV_Sensor/
 //ADDED_AT          "2016-07-01"
 //AUTHOR            "Travis Brown"
 

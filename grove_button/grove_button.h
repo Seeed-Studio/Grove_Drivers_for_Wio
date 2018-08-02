@@ -37,7 +37,7 @@
 //IF_TYPE           GPIO
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-Button.jpg
 //DESCRIPTION       "Grove Button is a momentary push button. It contains one independent "momentary on/off" button. “Momentary” means that the button rebounds on its own after it is released. The button outputs a HIGH signal when pressed, and LOW when released."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Button
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Button/
 //ADDED_AT          "2015-10-01"
 //AUTHOR            "SEEED"
 

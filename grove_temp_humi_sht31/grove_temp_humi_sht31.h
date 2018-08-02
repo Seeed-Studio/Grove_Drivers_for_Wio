@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Temperature&Humidity Sensor (SHT31)"
 //SKU               101020212
 //IF_TYPE           I2C
-//IMAGE_URL         https://statics3.seeedstudio.com/seeed/img/2016-06/cmJT8HtXruW9KsyjBBeqDNT9.jpg
+//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove_temp_humi_sht31.jpg
 //DESCRIPTION       "The SHT31 sensor could be the finest and highest-accuracy humidity sensor you can find, as it can acquire the relative humidity at only ±2% error."
 //WIKI_URL          http://wiki.seeedstudio.com/Grove-TempAndHumi_Sensor-SHT31/
 //ADDED_AT          "2018-08-01"

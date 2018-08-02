@@ -37,7 +37,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-oled_9696.jpg
 //DESCRIPTION       "Grove - OLED 96×96 is constructed with 96×96 dot matrix OLED module LY120 and SSD1327 driver IC which has a number of advantages such as high brightness, self-emission, high contrast ratio, slim / thin outline, wide viewing angle, wide temperature range, and low power consumption."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_OLED_Display_1.12%22
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/
 //ADDED_AT          "2016-07-01"
 //AUTHOR            "Travis Brown"
 

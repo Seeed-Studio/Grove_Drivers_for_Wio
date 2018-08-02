@@ -37,7 +37,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-i2c-adc.jpg
 //DESCRIPTION       "Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021."
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_I2C_ADC
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-I2C_ADC/
 //ADDED_AT          "2016-05-31"
 //AUTHOR            "SEEED"
 

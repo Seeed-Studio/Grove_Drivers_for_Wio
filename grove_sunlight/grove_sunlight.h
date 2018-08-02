@@ -36,7 +36,7 @@
 //IF_TYPE           I2C
 //IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove-sunlight.jpg
 //DESCRIPTION       "Grove - Sunlight Sensor is a multi-channel digital light sensor, which has the ability to detect UV-light, visible light and infrared light"
-//WIKI_URL          http://www.seeedstudio.com/wiki/Grove_-_Sunlight_Sensor
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-Sunlight_Sensor/
 //ADDED_AT          "2016-07-21"
 //AUTHOR            "Airdissy"
 
