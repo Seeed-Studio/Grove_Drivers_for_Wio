@@ -47,7 +47,7 @@ bool GroveServo::write_angle(int degree)
 {
     last_degree = degree;
     degree = constrain(degree, 20, 160);
-    float percent = 10 * degree / 180 + 2.5;
+    float percent = 10.0f * degree / 180 + 2.5;
     suli_pwm_frequency(this->io, 50);
     suli_pwm_output(this->io, percent);
     return true;
@@ -57,7 +57,7 @@ bool GroveServo::write_angle_motion_in_seconds(int degree, int seconds)
 {
     last_degree = degree;
     degree = constrain(degree, 20, 160);
-    float percent = 10 * degree / 180 + 2.5;
+    float percent = 10.0f * degree / 180 + 2.5;
     suli_pwm_frequency(this->io, 50);
     suli_pwm_output(this->io, percent);
 
