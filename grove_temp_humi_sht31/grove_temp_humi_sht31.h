@@ -1,7 +1,7 @@
 /*
  * grove_temp_humi_sht31.h
  *
- * Copyright (c) 2018 Seeed K.K.
+ * Copyright (c) 2019 Seeed K.K.
  * Website    : www.seeed.co.jp
  * Author     : Takashi Matsuoka
  *
@@ -65,6 +65,15 @@ public:
      * @return bool
      */
     bool read_humidity(float *humidity);
+
+    /**
+     *
+     *
+     * @param onoff - 1: on, 0: off
+     *
+     * @return bool
+     */
+    bool write_heater_onoff(int onoff);
 
 private:
     I2C_T *i2c;

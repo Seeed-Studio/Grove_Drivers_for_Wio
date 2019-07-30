@@ -1,7 +1,7 @@
 /*
  * grove_temp_humi_sht31.cpp
  *
- * Copyright (c) 2018 Seeed K.K.
+ * Copyright (c) 2019 Seeed K.K.
  * Website    : www.seeed.co.jp
  * Author     : Takashi Matsuoka
  *
@@ -32,6 +32,8 @@
 #define I2C_ADDRESS         (0x44 << 1)
 #define CMD_SOFT_RESET	    (0x30a2)
 #define CMD_SINGLE_HIGH		(0x2400)
+#define CMD_HEATER_ON		(0x306d)
+#define CMD_HEATER_OFF		(0x3066)
 
 #define POLYNOMIAL			(0x31)
 
@@ -64,6 +66,14 @@ bool GroveTempHumiSHT31::read_temperature(float *temperature)
 bool GroveTempHumiSHT31::read_humidity(float *humidity)
 {
 	return ReadTempHumi(NULL, humidity);
+}
+
+bool GroveTempHumiSHT31::write_heater_onoff(int onoff)
+{
+	if (onoff)
+		SendCommand(CMD_HEATER_ON);
+	else
+		SendCommand(CMD_HEATER_OFF);
 }
 
 void GroveTempHumiSHT31::SendCommand(uint16_t cmd)
