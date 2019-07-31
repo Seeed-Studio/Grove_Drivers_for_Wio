@@ -1,5 +1,5 @@
 /*
- * grove_temp_humi_sht31.h
+ * grove_temp_humi_sht35.h
  *
  * Copyright (c) 2019 Seeed K.K.
  * Website    : www.seeed.co.jp
@@ -27,24 +27,24 @@
  */
 
 
-#ifndef __GROVE_TEMP_HUMI_SHT31_H__
-#define __GROVE_TEMP_HUMI_SHT31_H__
+#ifndef __GROVE_TEMP_HUMI_SHT35_H__
+#define __GROVE_TEMP_HUMI_SHT35_H__
 
 #include "suli2.h"
 
-//GROVE_NAME        "Grove - Temperature&Humidity Sensor (SHT31)"
-//SKU               101020212
+//GROVE_NAME        "Grove - I2C High Accuracy Temp&Humi Sensor (SHT35)"
+//SKU               101020592
 //IF_TYPE           I2C
-//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove_temp_humi_sht31.jpg
-//DESCRIPTION       "Grove - Temp&Humi Sensor(SHT31) is a highly reliable, accurate, quick response and integrated temperature & humidity sensor. The typical accuracy of this module can be ±2%RH (for relative humidity) and ±0.3°C (for temperature)."
-//WIKI_URL          http://wiki.seeedstudio.com/Grove-TempAndHumi_Sensor-SHT31/
-//ADDED_AT          "2018-08-01"
+//IMAGE_URL         https://www.seeedstudio.site/media/catalog/product/cache/ef3164306500b1080e8560b2e8b5cc0f/h/t/httpsstatics3.seeedstudio.comseeedfile2018-10bazaar951702_1010205922.jpg
+//DESCRIPTION       "Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) is a highly reliable, accurate, quick response and integrated temperature & humidity sensor. The typical accuracy of this module can be ±1.5%RH (for relative humidity) and ±0.1°C (for temperature)."
+//WIKI_URL          http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/
+//ADDED_AT          "2019-07-31"
 //AUTHOR            "SEEED"
 
-class GroveTempHumiSHT31
+class GroveTempHumiSHT35
 {
 public:
-    GroveTempHumiSHT31(int pinsda, int pinscl);
+    GroveTempHumiSHT35(int pinsda, int pinscl);
     bool on_power_on();
     bool on_power_off();
 

@@ -1,5 +1,5 @@
 /*
- * grove_temp_humi_sht31.cpp
+ * grove_temp_humi_sht35.cpp
  *
  * Copyright (c) 2019 Seeed K.K.
  * Website    : www.seeed.co.jp
@@ -27,9 +27,9 @@
  */
 
 #include "suli2.h"
-#include "grove_temp_humi_sht31.h"
+#include "grove_temp_humi_sht35.h"
 
-#define I2C_ADDRESS         (0x44 << 1)
+#define I2C_ADDRESS         (0x45 << 1)
 #define CMD_SOFT_RESET	    (0x30a2)
 #define CMD_SINGLE_HIGH		(0x2400)
 #define CMD_HEATER_ON		(0x306d)
@@ -37,7 +37,7 @@
 
 #define POLYNOMIAL			(0x31)
 
-GroveTempHumiSHT31::GroveTempHumiSHT31(int pinsda, int pinscl)
+GroveTempHumiSHT35::GroveTempHumiSHT35(int pinsda, int pinscl)
 {
     this->i2c = (I2C_T *)malloc(sizeof(I2C_T));
     suli_i2c_init(i2c, pinsda, pinscl);
@@ -45,7 +45,7 @@ GroveTempHumiSHT31::GroveTempHumiSHT31(int pinsda, int pinscl)
     on_power_on();
 }
 
-bool GroveTempHumiSHT31::on_power_on()
+bool GroveTempHumiSHT35::on_power_on()
 {
 	SendCommand(CMD_SOFT_RESET);
     suli_delay_ms(1);
@@ -53,22 +53,22 @@ bool GroveTempHumiSHT31::on_power_on()
     return true;
 }
 
-bool GroveTempHumiSHT31::on_power_off()
+bool GroveTempHumiSHT35::on_power_off()
 {
     return true;
 }
 
-bool GroveTempHumiSHT31::read_temperature(float *temperature)
+bool GroveTempHumiSHT35::read_temperature(float *temperature)
 {
 	return ReadTempHumi(temperature, NULL);
 }
 
-bool GroveTempHumiSHT31::read_humidity(float *humidity)
+bool GroveTempHumiSHT35::read_humidity(float *humidity)
 {
 	return ReadTempHumi(NULL, humidity);
 }
 
-bool GroveTempHumiSHT31::write_heater_onoff(int onoff)
+bool GroveTempHumiSHT35::write_heater_onoff(int onoff)
 {
 	if (onoff)
 		SendCommand(CMD_HEATER_ON);
@@ -76,7 +76,7 @@ bool GroveTempHumiSHT31::write_heater_onoff(int onoff)
 		SendCommand(CMD_HEATER_OFF);
 }
 
-void GroveTempHumiSHT31::SendCommand(uint16_t cmd)
+void GroveTempHumiSHT35::SendCommand(uint16_t cmd)
 {
 	uint8_t writeData[2];
 	writeData[0] = cmd >> 8;
@@ -84,7 +84,7 @@ void GroveTempHumiSHT31::SendCommand(uint16_t cmd)
     suli_i2c_write(i2c, I2C_ADDRESS, writeData, sizeof(writeData));
 }
 
-bool GroveTempHumiSHT31::ReadTempHumi(float *temperature, float *humidity)
+bool GroveTempHumiSHT35::ReadTempHumi(float *temperature, float *humidity)
 {
 	SendCommand(CMD_SINGLE_HIGH);
 	delay(15);
@@ -111,7 +111,7 @@ bool GroveTempHumiSHT31::ReadTempHumi(float *temperature, float *humidity)
     return true;
 }
 
-static uint8_t GroveTempHumiSHT31::CalcCRC8(const uint8_t *data, int len)
+static uint8_t GroveTempHumiSHT35::CalcCRC8(const uint8_t *data, int len)
 {
 	uint8_t crc = 0xff;
   
