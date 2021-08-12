@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - Temperature&Humidity Sensor (SHT31)"
 //SKU               101020212
 //IF_TYPE           I2C
-//IMAGE_URL         https://raw.githubusercontent.com/Seeed-Studio/Grove_Drivers_for_Wio/static/images/grove_temp_humi_sht31.jpg
+//IMAGE_URL         https://files.seeedstudio.com/wiki/Grove-TempAndHumi_Sensor-SHT31/img/main_new.jpg
 //DESCRIPTION       "Grove - Temp&Humi Sensor(SHT31) is a highly reliable, accurate, quick response and integrated temperature & humidity sensor. The typical accuracy of this module can be ±2%RH (for relative humidity) and ±0.3°C (for temperature)."
 //WIKI_URL          http://wiki.seeedstudio.com/Grove-TempAndHumi_Sensor-SHT31/
 //ADDED_AT          "2018-08-01"
