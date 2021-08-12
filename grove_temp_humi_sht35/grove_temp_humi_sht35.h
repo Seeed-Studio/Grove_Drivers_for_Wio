@@ -35,7 +35,7 @@
 //GROVE_NAME        "Grove - I2C High Accuracy Temp&Humi Sensor (SHT35)"
 //SKU               101020592
 //IF_TYPE           I2C
-//IMAGE_URL         https://www.seeedstudio.site/media/catalog/product/cache/ef3164306500b1080e8560b2e8b5cc0f/h/t/httpsstatics3.seeedstudio.comseeedfile2018-10bazaar951702_1010205922.jpg
+//IMAGE_URL         https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/main.jpg
 //DESCRIPTION       "Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) is a highly reliable, accurate, quick response and integrated temperature & humidity sensor. The typical accuracy of this module can be ±1.5%RH (for relative humidity) and ±0.1°C (for temperature)."
 //WIKI_URL          http://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/
 //ADDED_AT          "2019-07-31"
